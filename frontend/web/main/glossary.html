@@ -1,0 +1,977 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>PoliceArrests.com</title>
+	<meta property="og:title" content="PoliceArrests.com - Search Police Arrest Records" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://www.policearrests.com" />
+	<meta property="og:image" content="http://www.policearrests.com/img/og_image.png" />
+	<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/responsive.css" rel="stylesheet" type="text/css">
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<!-- Slick Nav -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+	<script src="js/slicknav/jquery.slicknav.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#hnav').slicknav();
+		});
+	</script>
+	<!-- Accordion -->
+	<script type="text/javascript" src="js/accordion/accordion.js"></script>
+	<!-- Newsticker -->
+	<script type="text/javascript" src="js/newsticker/newsticker.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("ul#ticker01").liScroll();
+		});
+	</script>
+	<!-- Resizing Header On Scroll -->
+	<script src="js/header/classie.js"></script>
+	<script>
+		function init() {
+			window.addEventListener('scroll', function(e){
+				var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+					shrinkOn = 90,
+					header = document.querySelector("header");
+				if (distanceY > shrinkOn) {
+					classie.add(header,"smaller");
+				} else {
+					if (classie.has(header,"smaller")) {
+						classie.remove(header,"smaller");
+					}
+				}
+			});
+		}
+		window.onload = init();
+	</script>
+</head>
+<body>
+
+<!-- Header -->
+<header id="header">
+	<div class="wrapper cf">
+		<div class="site-logo"><a href="#">PoliceArrests.com</a></div>
+		<div class="hnav">
+			<ul id="hnav">
+				<li><a href="#"><i class="icn-hnav-home"></i>Home</a></li>
+				<li><a href="#"><i class="icn-hnav-statistics"></i>Statistics</a></li>
+				<li><a href="#"><i class="icn-hnav-recent"></i>Recent</a></li>
+				<li><a href="#"><i class="icn-hnav-states"></i>Arrests</a></li>
+				<li class="app-btn1"><a class="app-ios" href="#">Available on the App Store</a></li>
+				<li class="app-btn2"><a class="app-android" href="#">Android App on Google Play</a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<!-- // Header -->
+
+<!-- Download App -->
+<div class="app-download">
+	<div class="wrapper">
+		<h2>Download Our Mobile App:</h2>
+		<ul>
+			<li><a class="app-ios" href="#">Available on the App Store</a></li>
+			<li><a class="app-android" href="#">Android App on Google Play</a></li>
+		</ul>
+		<a class="btn-close" href="#" title="Close">Close</a>
+	</div>
+</div>
+<!-- // Download App -->
+
+<!-- Main -->
+<div id="main">
+
+	<!-- Search -->
+	<div id="search2">
+		<div class="wrapper cf">
+			<div class="search-form cf">
+				<div class="row cf">
+					<div class="cell">
+						<input id="firstname" type="text" name="firstname" value="" placeholder="First Name" />
+					</div>
+					<div class="cell">
+						<input id="lastname" type="text" name="lastname" value="" placeholder="Last Name" />
+					</div>
+					<div class="cell">
+						<select id="state" name="state"><option value="" selected>Select State</option><option value="ALL">Nationwide</option><option value="AL">AL</option><option value="AK">AK</option><option value="AR">AR</option><option value="AZ">AZ</option><option value="CA">CA</option><option value="CO">CO</option><option value="CT">CT</option><option value="DC">DC</option><option value="DE">DE</option><option value="FL">FL</option><option value="GA">GA</option><option value="HI">HI</option><option value="IA">IA</option><option value="ID">ID</option><option value="IL">IL</option><option value="IN">IN</option><option value="KS">KS</option><option value="KY">KY</option><option value="LA">LA</option><option value="MA">MA</option><option value="MD">MD</option><option value="ME">ME</option><option value="MI">MI</option><option value="MN">MN</option><option value="MO">MO</option><option value="MS">MS</option><option value="MT">MT</option><option value="NE">NE</option><option value="NH">NH</option><option value="NJ">NJ</option><option value="NM">NM</option><option value="NV">NV</option><option value="NC">NC</option><option value="ND">ND</option><option value="NY">NY</option><option value="OH">OH</option><option value="OK">OK</option><option value="OR">OR</option><option value="PA">PA</option><option value="RI">RI</option><option value="SD">SD</option><option value="SC">SC</option><option value="TN">TN</option><option value="TX">TX</option><option value="UT">UT</option><option value="VA">VA</option><option value="VT">VT</option><option value="WA">WA</option><option value="WI">WI</option><option value="WV">WV</option><option value="WY">WY</option></select>
+					</div>
+					<div class="cell btn"><input type="submit" name="submit" value="Search Now" /></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // Search -->
+
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs">
+		<div class="wrapper cf">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li>Glossary</li>
+			</ul>
+		</div>
+	</div>
+	<!-- // Breadcrumbs -->
+
+	<!-- Content -->
+	<div class="section">
+		<div class="wrapper cf">
+			<div class="glossary cf">
+				<div class="gl-sidebar">
+					<div class="gl-nav cf">
+						<ul class="let-a">
+							<li><a href="#term_aka">A.K.A.</a></li>
+							<li><a href="#term_adw">ADW</a></li>
+							<li><a href="#term_accessory">Accessory</a></li>
+							<li><a href="#term_aggravation">Aggravation (e.g. aggravated assault, aggravated battery)</a></li>
+							<li><a href="#term_ao">A/O</a></li>
+							<li><a href="#term_arrest">Arrest</a></li>
+							<li><a href="#term_arrest_warrant">Arrest Warrant</a></li>
+							<li><a href="#term_arson">Arson</a></li>
+							<li><a href="#term_assault">Assault</a></li>
+							<li><a href="#term_attempt_robbery">Attempt Robbery/Attempted Robberies</a></li>
+						</ul>
+						<ul class="let-b">
+							<li><a href="#term_battery">Battery</a></li>
+							<li><a href="#term_bench_warrant">Bench Warrant</a></li>
+							<li><a href="#term_bac">Blood Alcohol Concentration (BAC)</a></li>
+							<li><a href="#term_bolo">BOLO (Be on the Lookout)</a></li>
+							<li><a href="#term_breathalyzer">Breathalyzer</a></li>
+							<li><a href="#term_bribe">Bribe</a></li>
+							<li><a href="#term_burglary1">Burglary, First Degree</a></li>
+							<li><a href="#term_burglary2">Burglary, Second Degree</a></li>
+							<li><a href="#term_burning">Burning One’s Own Property with Intent to Defraud</a></li>
+						</ul>
+						<ul class="let-c">
+							<li><a href="#term_campus">Campus police</a></li>
+							<li><a href="#term_carjacking">Carjacking</a></li>
+							<li><a href="#term_child">Child Sexual Abuse, First Degree</a></li>
+							<li><a href="#term_citation">Citation</a></li>
+							<li><a href="#term_civil_action">Civil Action</a></li>
+							<li><a href="#term_complexion">Complexion</a></li>
+							<li><a href="#term_complainant">Complainant</a></li>
+							<li><a href="#term_complaint">Complaint</a></li>
+							<li><a href="#term_confession">Confession</a></li>
+							<li><a href="#term_conspiracy">Conspiracy</a></li>
+							<li><a href="#term_contempt">Contempt</a></li>
+							<li><a href="#term_controlled">Controlled Substance</a></li>
+							<li><a href="#term_corruption">Corruption</a></li>
+							<li><a href="#term_county">County Police</a></li>
+							<li><a href="#term_court">Court</a></li>
+							<li><a href="#term_caa">Court Appointed Attorney</a></li>
+							<li><a href="#term_criminal_action">Criminal Action</a></li>
+						</ul>
+						<ul class="let-d">
+							<li><a href="#term_dob">D.O.B.</a></li>
+							<li><a href="#term_domestic_dispute">Domestic dispute</a></li>
+							<li><a href="#term_domestic_violence">Domestic violence</a></li>
+							<li><a href="#term_disorderly_conduc">Disorderly Conduct</a></li>
+							<li><a href="#term_distribution">Distribution of a Controlled Substance</a></li>
+							<li><a href="#term_driving">Driving Under the Influence</a></li>
+						</ul>
+						<ul class="let-e">
+							<li><a href="#term_ethnicity">Ethnicity</a></li>
+							<li><a href="#term_extradition">Extradition</a></li>
+						</ul>
+						<ul class="let-f">
+							<li><a href="#term_felony">Felony</a></li>
+						</ul>
+						<ul class="let-h">
+							<li><a href="#term_hate">Hate crime</a></li>
+							<li><a href="#term_high_speed">High-speed pursuit</a></li>
+							<li><a href="#term_homicide">Homicide</a></li>
+							<li><a href="#term_homicide_justifiable">Homicide, Justifiable</a></li>
+							<li><a href="#term_human_disorder">Human disorder</a></li>
+						</ul>
+						<ul class="let-i">
+							<li><a href="#term_indictment">Indictment</a></li>
+							<li><a href="#term_intimidation">Intimidation</a></li>
+						</ul>
+						<ul class="let-j">
+							<li><a href="#term_juvenile">Juvenile</a></li>
+						</ul>
+						<ul class="let-l">
+							<li><a href="#term_lka">L.K.A.</a></li>
+							<li><a href="#term_lockup">Lockup</a></li>
+						</ul>
+						<ul class="let-m">
+							<li><a href="#term_mo">M.O.</a></li>
+							<li><a href="#term_malicious">Malicious Burning</a></li>
+							<li><a href="#term_manslaughter">Manslaughter</a></li>
+							<li><a href="#term_manslaughter_voluntary">Manslaughter, Voluntary</a></li>
+							<li><a href="#term_manslaughter_involuntary">Manslaughter, Involuntary</a></li>
+							<li><a href="#term_minor">Minor</a></li>
+							<li><a href="#term_misdemeanor">Misdemeanor</a></li>
+							<li><a href="#term_municipal">Municipal police</a></li>
+							<li><a href="#term_murder1">Murder, First Degree</a></li>
+							<li><a href="#term_murder1f">Murder, First Degree Felony</a></li>
+							<li><a href="#term_murder2">Murder, Second Degree</a></li>
+						</ul>
+						<ul class="let-n">
+							<li><a href="#term_negligent">Negligent Homicide</a></li>
+						</ul>
+						<ul class="let-o">
+							<li><a href="#term_offense">Offense</a></li>
+						</ul>
+						<ul class="let-p">
+							<li><a href="#term_petty">Petty Offense</a></li>
+							<li><a href="#term_police">Police officer</a></li>
+							<li><a href="#term_possession1">Possession of a Controlled Substance</a></li>
+							<li><a href="#term_possession2">Possession of a Controlled Substance with Intent to Distribute</a></li>
+							<li><a href="#term_probable">Probable Cause</a></li>
+							<li><a href="#term_prosecutor">Prosecutor</a></li>
+						</ul>
+						<ul class="let-r">
+							<li><a href="#term_race">Race</a></li>
+							<li><a href="#term_radar">Radar</a></li>
+							<li><a href="#term_rape">Rape</a></li>
+							<li><a href="#term_reasonable">Reasonable Suspicion</a></li>
+							<li><a href="#term_robbery_fear">Robbery Fear</a></li>
+							<li><a href="#term_robbery_fv">Robbery F &amp; V (Robbery–Force &amp; Violence)</a></li>
+							<li><a href="#term_robbery_gun">Robbery Hold Up Gun (Robbery HUG, or RHUG)</a></li>
+							<li><a href="#term_robbery_knife">Robbery Hold Up Knife</a></li>
+							<li><a href="#term_robbery_snatch">Robbery Snatch</a></li>
+						</ul>
+						<ul class="let-s">
+							<li><a href="#term_search_warrant">Search Warrant</a></li>
+							<li><a href="#term_sexual_abuse">Sexual Abuse</a></li>
+							<li><a href="#term_sexual_abuse1">Sexual Abuse, First Degree</a></li>
+							<li><a href="#term_sexual_abuse2">Sexual Abuse, Second Degree</a></li>
+							<li><a href="#term_sheriff">Sheriff</a></li>
+							<li><a href="#term_shoplifting">Shoplifting</a></li>
+							<li><a href="#term_statute_limitations">Statute of Limitations</a></li>
+						</ul>
+						<ul class="let-t">
+							<li><a href="#term_theft">Theft</a></li>
+							<li><a href="#term_traffic">Traffic Ticket</a></li>
+						</ul>
+						<ul class="let-u">
+							<li><a href="#term_unlawful">Unlawful Entry</a></li>
+						</ul>
+						<ul class="let-v">
+							<li><a href="#term_verbal">Verbal abuse</a></li>
+							<li><a href="#term_vin">VIN</a></li>
+						</ul>
+						<ul class="let-w">
+							<li><a href="#term_warrant">Warrant</a></li>
+							<li><a href="#term_witness">Witness</a></li>
+						</ul>
+						<ul class="let-y">
+							<li><a href="#term_youth">Youth</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="gl-content">
+					<div class="gl-content-inn">
+						<a name="term_aka"></a>
+						<div class="gl-block">
+							<h3>A.K.A.</h3>
+							<p>Used when an individual has more than one name; abbreviation version of “also known as”; “alias”.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_adw"></a>
+						<div class="gl-block">
+							<h3>ADW</h3>
+							<p>Assault with a Dangerous Weapon — anviolent conflict in which the a person uses any of a variety of weapons to injure or threaten injury. Common instruments that satisfy this threshold include knife, gun, shodfoot (kicking), hammer, rock, furniture, etc.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_accessory"></a>
+						<div class="gl-block">
+							<h3>Accessory</h3>
+							<p>Person who is in involved in a criminal act but not necessarily present at the crime scene:threshold acts include aiding, abetting, commanding, or counseling another in a crime. Other terms include “accomplice” or “abettor”.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_aggravation"></a>
+						<div class="gl-block">
+							<h3>Aggravation (e.g. aggravated assault, aggravated battery)</h3>
+							<p>A factor that substantially magnifies the severity of an offense.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_ao"></a>
+						<div class="gl-block">
+							<h3>A/O</h3>
+							<p>Abbreviation that means “arresting officer”.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_arrest"></a>
+						<div class="gl-block">
+							<h3>Arrest</h3>
+							<p>To detain and hold an individual with lawful authority in order to charge him with a criminal complaint.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_arrest_warrant"></a>
+						<div class="gl-block">
+							<h3>Arrest Warrant</h3>
+							<p>A judge’s order to arrest a person and compel him to appear in court.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_arson"></a>
+						<div class="gl-block">
+							<h3>Arson</h3>
+							<p>Burning a structure or vehicle as a criminal act.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_assault"></a>
+						<div class="gl-block">
+							<h3>Assault</h3>
+							<p>A credible attempt or threat to harm another person which causes the victim to fear injury or bodily harm.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_attempt_robbery"></a>
+						<div class="gl-block">
+							<h3>Attempt Robbery/Attempted Robberies</h3>
+							<p>Criminal actions that show attempts/intent to steal from another; it is not necessary to complete the action or possess another’s property to be charged with this offense.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_battery"></a>
+						<div class="gl-block">
+							<h3>Battery</h3>
+							<p>Harm to a person in any way, or physical contact with insult.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_bench_warrant"></a>
+						<div class="gl-block">
+							<h3>Bench Warrant</h3>
+							<p>A court-issueddemand toappear or be present.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_bac"></a>
+						<div class="gl-block">
+							<h3>Blood Alcohol Concentration (BAC)</h3>
+							<p>The detectable level of alcohol in the bloodstream.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_bolo"></a>
+						<div class="gl-block">
+							<h3>BOLO (Be on the Lookout)</h3>
+							<p>Law enforcementterm alerting others to seek involved parties, often followed by physical descriptions of accomplices or persons of interest.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_breathalyzer"></a>
+						<div class="gl-block">
+							<h3>Breathalyzer</h3>
+							<p>An instrument that determines the Blood Alcohol Content (BAC) by means of measuring respiration.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_bribe"></a>
+						<div class="gl-block">
+							<h3>Bribe</h3>
+							<p>A sum of money or other payment offered in exchange for influencing a person’s views or conduct. Bribes paid to police may be sought to protect illegal activity, obtain information on criminal investigations, remove criminal files, or alter court testimony.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_burglary1"></a>
+						<div class="gl-block">
+							<h3>Burglary, First Degree</h3>
+							<p>Attempting to steal from another by entering a dwelling unauthorized/uninvited while the occupant is present.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_burglary2"></a>
+						<div class="gl-block">
+							<h3>Burglary, Second Degree</h3>
+							<p>Attempting to steal from another by entering a dwelling unauthorized/uninvited.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_burning"></a>
+						<div class="gl-block">
+							<h3>Burning One’s Own Property with Intent to Defraud</h3>
+							<p>Burning a property, building or vehicle of one’s own in order to defraud another.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_campus"></a>
+						<div class="gl-block">
+							<h3>Campus police</h3>
+							<p>Law enforcement officials on college and university campuses.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_carjacking"></a>
+						<div class="gl-block">
+							<h3>Carjacking</h3>
+							<p>Taking a motor vehicle with recklessness or force from another person in possession.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_child"></a>
+						<div class="gl-block">
+							<h3>Child Sexual Abuse, First Degree</h3>
+							<p>Sexual acts with a child under the age of 16 when the perpetrator is at least four years older than the victim.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_citation"></a>
+						<div class="gl-block">
+							<h3>Citation</h3>
+							<p>A written record of a minor offense issued by police officers that specifies a standard penalty yet allows for appeal of that penalty (e.g. traffic ticket).</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_civil_action"></a>
+						<div class="gl-block">
+							<h3>Civil Action</h3>
+							<p>A court filing seeking financial damages or restitution for a financial injury to the complainant (e.g. replacement cost for lost property).</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_complexion"></a>
+						<div class="gl-block">
+							<h3>Complexion</h3>
+							<p>Description of skin color (“light,” “medium,” or “dark”).</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_complainant"></a>
+						<div class="gl-block">
+							<h3>Complainant</h3>
+							<p>The victim or person instigating a legal process by filing a complaint.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_complaint"></a>
+						<div class="gl-block">
+							<h3>Complaint</h3>
+							<p>the sworn accusation of criminal behavior.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_confession"></a>
+						<div class="gl-block">
+							<h3>Confession</h3>
+							<p>Establishment of guilt based on a suspect’s admissions.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_conspiracy"></a>
+						<div class="gl-block">
+							<h3>Conspiracy</h3>
+							<p>Plan and subsequent actions by a couple or groupto commit a crime.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_contempt"></a>
+						<div class="gl-block">
+							<h3>Contempt</h3>
+							<p>Refusal to comply with a court order and/or disobeying a judge’s requests.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_controlled"></a>
+						<div class="gl-block">
+							<h3>Controlled Substance</h3>
+							<p>A drug or substance regulated by federal or District of Columbia law, including opiates.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_corruption"></a>
+						<div class="gl-block">
+							<h3>Corruption</h3>
+							<p>Breach of behavioral standards for police officers or other officials that includes abuse of authority for financial or personal advancement.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_county"></a>
+						<div class="gl-block">
+							<h3>County Police</h3>
+							<p>Municipal law enforcement with county jurisdiction whose role is more limited than sheriffs’.They comprise about 1 percent of local departments.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_court"></a>
+						<div class="gl-block">
+							<h3>Court</h3>
+							<p>A Constitutionally-constructed body with authority to decide legaldisputes.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_caa"></a>
+						<div class="gl-block">
+							<h3>Court Appointed Attorney</h3>
+							<p>An attorney who represents a moneyless party.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_criminal_action"></a>
+						<div class="gl-block">
+							<h3>Criminal Action</h3>
+							<p>A legal processin which the state accuses an individual with breaking a lawand in which the defendant faces a fine or jail time if convicted.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_dob"></a>
+						<div class="gl-block">
+							<h3>D.O.B.</h3>
+							<p>Date of Birth.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_domestic_dispute"></a>
+						<div class="gl-block">
+							<h3>Domestic dispute</h3>
+							<p>When police are called to intervene in an escalating dispute between two or more members of a family, a household, or others in an intimate relationship.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_domestic_violence"></a>
+						<div class="gl-block">
+							<h3>Domestic violence</h3>
+							<p>Actual or threatened violence between two members of a family, household  or people in an intimate relationship.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_disorderly_conduc"></a>
+						<div class="gl-block">
+							<h3>Disorderly Conduct</h3>
+							<p>A provocative act which alarms or disturbs another and/or disturbs the peace.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_distribution"></a>
+						<div class="gl-block">
+							<h3>Distribution of a Controlled Substance</h3>
+							<p>Providing or attempting to provide a quantity of drugs to another.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_driving"></a>
+						<div class="gl-block">
+							<h3>Driving Under the Influence</h3>
+							<p>Operating a motor vehicle while under the influence of alcohol (.08 percent blood alcohol content as measured by Breathalyzer) or drugs.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_ethnicity"></a>
+						<div class="gl-block">
+							<h3>Ethnicity</h3>
+							<p>Physical characteristics that are shared by people with the same geographic ancestry (e.g. Latin, Eastern European, Asian).</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_extradition"></a>
+						<div class="gl-block">
+							<h3>Extradition</h3>
+							<p>The process of transferring between states a person wanted for criminal prosecution or imprisonment.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_felony"></a>
+						<div class="gl-block">
+							<h3>Felony</h3>
+							<p>An offense for which the death sentence or one year or more of imprisonment is possible.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_hate"></a>
+						<div class="gl-block">
+							<h3>Hate crime</h3>
+							<p>A crime based on intolerance for the victim’s race, religion, ethnicity or sexual orientation.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_high_speed"></a>
+						<div class="gl-block">
+							<h3>High-speed pursuit</h3>
+							<p>When a suspect flees a police officer at high speed.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_homicide"></a>
+						<div class="gl-block">
+							<h3>Homicide</h3>
+							<p>Killinganother human being, whether murder or manslaughter.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_homicide_justifiable"></a>
+						<div class="gl-block">
+							<h3>Homicide, Justifiable</h3>
+							<p>Killing another personin self defense or to prevent a forcible felony.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_human_disorder"></a>
+						<div class="gl-block">
+							<h3>Human disorder</h3>
+							<p>Societal decay due to residents’ behaviors including public drinking, gang activity, street harassment, drug sale and use, noise, and commercial sex.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_indictment"></a>
+						<div class="gl-block">
+							<h3>Indictment</h3>
+							<p>A grand jury’s decision, forwarded to the court, charging an individual with a crime based on evidence provided.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_intimidation"></a>
+						<div class="gl-block">
+							<h3>Intimidation</h3>
+							<p>To threaten another in order to influence his behavior. The threat may include physical harm, restraint, confinement, or accusations of crime (even if true).</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_juvenile"></a>
+						<div class="gl-block">
+							<h3>Juvenile</h3>
+							<p>A person under 18 years old, also referred to as a youth or minor.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_lka"></a>
+						<div class="gl-block">
+							<h3>L.K.A.</h3>
+							<p>Last Known Address.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_lockup"></a>
+						<div class="gl-block">
+							<h3>Lockup</h3>
+							<p>A facility for processing and holding those accused of a crime, including for photographingand fingerprinting.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_mo"></a>
+						<div class="gl-block">
+							<h3>M.O.</h3>
+							<p>Modus Operandi, (Latin) meaning method of operation, the typical way an individual goes about committing a crime. (E.g.wearing dark glasses when robbing a bank).</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_malicious"></a>
+						<div class="gl-block">
+							<h3>Malicious Burning</h3>
+							<p>Burning property valued at more than $200 with malicious intent.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_manslaughter"></a>
+						<div class="gl-block">
+							<h3>Manslaughter</h3>
+							<p>Killing a human being without malice (e.g. in a traffic accident).</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_manslaughter_voluntary"></a>
+						<div class="gl-block">
+							<h3>Manslaughter, Voluntary</h3>
+							<p>Killinganotherwillfully or with a conscious disregard of an extreme risk of death or serious bodily injury,and in which mitigating factors (e.g. acting in the heat of passion or by adequate provocation) precludes a determination that the killing was malicious.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_manslaughter_involuntary"></a>
+						<div class="gl-block">
+							<h3>Manslaughter, Involuntary</h3>
+							<p>An unintentional or accidental killing without justification or excuse (e.g. in a traffic accident).</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_minor"></a>
+						<div class="gl-block">
+							<h3>Minor</h3>
+							<p>A person under 18 years old, a juvenile.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_misdemeanor"></a>
+						<div class="gl-block">
+							<h3>Misdemeanor</h3>
+							<p>A criminal offense for which the maximum sentence is one year or less.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_municipal"></a>
+						<div class="gl-block">
+							<h3>Municipal police</h3>
+							<p>Also known as city police,this category comprises the majority of American law enforcement.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_murder1"></a>
+						<div class="gl-block">
+							<h3>Murder, First Degree</h3>
+							<p>Killing with specific intent, premeditation and deliberation, without self-defense or mitigation.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_murder1f"></a>
+						<div class="gl-block">
+							<h3>Murder, First Degree Felony</h3>
+							<p>Killing a person while committing a felony, including arson, sexual abuse in the first degree, child sexual abuse in the first degree, cruelty to children in the first degree, mayhem, robbery, kidnapping, first degree burglary while armed with or wielding a dangerous weapon, burglary in the second degree while armed with or using a dangerous weapon, or distribution of a controlled substance.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_murder2"></a>
+						<div class="gl-block">
+							<h3>Murder, Second Degree</h3>
+							<p>Killing with intent to kill or seriously injure, or disregard of the known risk of death or serious bodily injury to that person, and in the absence of self-defense or mitigation.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_negligent"></a>
+						<div class="gl-block">
+							<h3>Negligent Homicide</h3>
+							<p>Death resulting from careless, reckless, or negligent operation of a motor vehicle.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_offense"></a>
+						<div class="gl-block">
+							<h3>Offense</h3>
+							<p>A violation of the law of a state or local jurisdiction.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_petty"></a>
+						<div class="gl-block">
+							<h3>Petty Offense</h3>
+							<p>An offense for which the only allowable penalty is a fine.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_police"></a>
+						<div class="gl-block">
+							<h3>Police officer</h3>
+							<p>An employeeof a government (municipal, city, regional, or state)who has the authority to enforce the law and may use coercive force when carrying out normal duties.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_possession1"></a>
+						<div class="gl-block">
+							<h3>Possession of a Controlled Substance</h3>
+							<p>Willingly having a drug classified as a controlled substance.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_possession2"></a>
+						<div class="gl-block">
+							<h3>Possession of a Controlled Substance with Intent to Distribute</h3>
+							<p>Willingly having a drug classified as a controlled substancein conjunction withthe desire to transfer it to another person.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_probable"></a>
+						<div class="gl-block">
+							<h3>Probable Cause</h3>
+							<p>Where known facts and circumstances, of a reasonably trustworthy nature, are sufficient to justify a man of reasonable caution or prudence in the belief that a certain person has committed, is committing, or is about to commit a criminal act.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_prosecutor"></a>
+						<div class="gl-block">
+							<h3>Prosecutor</h3>
+							<p>An attorney who brings a criminal action against va person in the name of the government.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_race"></a>
+						<div class="gl-block">
+							<h3>Race</h3>
+							<p>Acategory of people determined by shared physical and biological traits (e.g. Caucasian, African-Americans, Asians, Latins).</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_radar"></a>
+						<div class="gl-block">
+							<h3>Radar</h3>
+							<p>Handheld machine used by police officers to measure speeds of vehicles.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_rape"></a>
+						<div class="gl-block">
+							<h3>Rape</h3>
+							<p>Forced, nonconsensual sexual intercourse using force or threat of force.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_reasonable"></a>
+						<div class="gl-block">
+							<h3>Reasonable Suspicion</h3>
+							<p>Factors that combine to lead a law enforcement official to narrow the field of possible suspects in a criminal act but which don’t meet the criteria for an arrestable offense.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_robbery_fear"></a>
+						<div class="gl-block">
+							<h3>Robbery Fear</h3>
+							<p>A robbery in which the suspect coerces the victim without physical force or possession of a weapon.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_robbery_fv"></a>
+						<div class="gl-block">
+							<h3>Robbery F &amp; V (Robbery–Force &amp; Violence)</h3>
+							<p>The use of physical force in the commission of a robbery.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_robbery_gun"></a>
+						<div class="gl-block">
+							<h3>Robbery Hold Up Gun (Robbery HUG, or RHUG)</h3>
+							<p>A robbery in which the victim believed he saw the suspect in possession of a firearm.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_robbery_knife"></a>
+						<div class="gl-block">
+							<h3>Robbery Hold Up Knife</h3>
+							<p>A robbery in which the victim believed he saw the suspect in possession of a knife.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_robbery_snatch"></a>
+						<div class="gl-block">
+							<h3>Robbery Snatch</h3>
+							<p>Afast robbery in which the suspect grabspossessions from the victim.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_search_warrant"></a>
+						<div class="gl-block">
+							<h3>Search Warrant</h3>
+							<p>A judge’s authorizing an officer to search a specific area (residence, office, vehicle) for and seize property that may be evidence in a criminal complaint or trial.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_sexual_abuse"></a>
+						<div class="gl-block">
+							<h3>Sexual Abuse</h3>
+							<p>A sexual act or sexual contact without the victim’s permission.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_sexual_abuse1"></a>
+						<div class="gl-block">
+							<h3>Sexual Abuse, First Degree</h3>
+							<p>Engaging in or causing another person to engage in or submit to a sexual act (1) by using force against that other person; or (2) by threatening or placing that other person in reasonable fear that any person will be subjected to death, bodily injury, or kidnapping; or (3) after rendering that other person unconscious; or (4) after administering to that other person a drug or intoxicant.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_sexual_abuse2"></a>
+						<div class="gl-block">
+							<h3>Sexual Abuse, Second Degree</h3>
+							<p>Engaging in or causing another person to engage in or submit to a sexual act (1) by threatening or placing that other person in reasonable fear, or (2) where the person knows or has reason to know that the other person is unable to understand the nature of the conduct, or unable to decline participating in the sexual act, or unable to communicate unwillingness to engage in that sexual act.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_sheriff"></a>
+						<div class="gl-block">
+							<h3>Sheriff</h3>
+							<p>An elected law enforcement official who also serves in the court and corrections systems.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_shoplifting"></a>
+						<div class="gl-block">
+							<h3>Shoplifting</h3>
+							<p>(1) Theft by concealment of an item for sale, or (2) removing or altering a price tag or other identification mark imprinted on or attached to property for sale; or (3) switching containers of items for sale.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_statute_limitations"></a>
+						<div class="gl-block">
+							<h3>Statute of Limitations</h3>
+							<p>Thefinite period of time in which to bring lawsuits or criminal prosecutions for many categories of crime. Does not apply to murder, involuntary manslaughter, reckless homicide, treason, arson, or forgery.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_theft"></a>
+						<div class="gl-block">
+							<h3>Theft</h3>
+							<p>Taking or using the property of another person with the intent of depriving the owner of the right to the property.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_traffic"></a>
+						<div class="gl-block">
+							<h3>Traffic Ticket</h3>
+							<p>A citation issued by a police officer for a traffic violation that may be settled with payment of a fine or by appearing in court to plead or appeal.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_unlawful"></a>
+						<div class="gl-block">
+							<h3>Unlawful Entry</h3>
+							<p>Intentionally entering or attempting to enter a building without permission (e.g. trespassing).</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_verbal"></a>
+						<div class="gl-block">
+							<h3>Verbal abuse</h3>
+							<p>Inappropriate language, particularly racial and ethnic slurs, when used by police officers.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_vin"></a>
+						<div class="gl-block">
+							<h3>VIN</h3>
+							<p>Vehicle Identification Number, a unique identifier assigned to vehicles during the manufacturing process.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_warrant"></a>
+						<div class="gl-block">
+							<h3>Warrant</h3>
+							<p>A judge’s order directing a law enforcement officer to arrest a person and bring them to court.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_witness"></a>
+						<div class="gl-block">
+							<h3>Witness</h3>
+							<p>One who testifies as to what they have seen, heard, or otherwise observed and who is not necessarily a party to the action.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+						<a name="term_youth"></a>
+						<div class="gl-block">
+							<h3>Youth</h3>
+							<p>Someone under age 18, a juvenile.</p>
+							<a class="gl-top" href="#top" title="Go to top"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // Content -->
+
+</div>
+<!-- // Main -->
+
+<!-- Footer -->
+<footer id="footer">
+	<div class="wrapper cf">
+		<div class="fblock fnav cf">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Browse</a></li>
+				<li><a href="#">Statistics</a></li>
+				<li><a href="#">Recent</a></li>
+				<li><a href="#">States</a></li>
+				<li><a href="#">Terms</a></li>
+				<li><a href="#">Privacy</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		<div class="fblock fcopy cf">
+			<p>&copy; 2016 PoliceArrests. All rights reserved.</p>
+		</div>
+		<div class="fblock fshare cf">
+			<ul>
+				<li><a class="fb" href="#">Facebook</a></li>
+				<li><a class="tw" href="#">Twitter</a></li>
+				<li><a class="gp" href="#">Google Plus</a></li>
+			</ul>
+		</div>
+		<div class="fblock fdisc cf">
+			<p>The information that makes up our search results is largely derived from public sources, which originate and/or aggregate such information. PoliceArrests.com does not originate, verify, or guarantee the accuracy of any information provide via search results. Search results may be out of date or otherwise no longer applicable.</p>
+			<p>PoliceArrests.com is not a "consumer reporting agency" as defined by Fair Credit Reporting Act. Our Terms of Service prohibit the use of PoliceArrests.com to determine an individual's eligibility for personal credit or employment, tenant screening, or other business transactions, or for any unlawful purposes such as stalking or harassing others. Such use of PoliceArrests.com may subject you to civil and criminal litigation and penalties.</p>
+			<p>Your use of PoliceArrests.com is conditioned on your full compliance with our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+		</div>
+	</div>
+</footer>
+<!-- // Footer -->
+
+<!-- Equal Height For Arrest Record Page Elements -->
+<script type="text/javascript">
+	equalheight = function(container){
+	var currentTallest = 0,
+		 currentRowStart = 0,
+		 rowDivs = new Array(),
+		 $el,
+		 topPosition = 0;
+	 $(container).each(function() {
+	   $el = $(this);
+	   $($el).height('auto')
+	   topPostion = $el.position().top;
+	   if (currentRowStart != topPostion) {
+		 for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+		   rowDivs[currentDiv].height(currentTallest);
+		 }
+		 rowDivs.length = 0; // empty the array
+		 currentRowStart = topPostion;
+		 currentTallest = $el.height();
+		 rowDivs.push($el);
+	   } else {
+		 rowDivs.push($el);
+		 currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+	  }
+	   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+		 rowDivs[currentDiv].height(currentTallest);
+	   }
+	 });
+	}
+	$(window).load(function() {
+	  equalheight('.offers a');
+	});
+	$(window).resize(function(){
+	  equalheight('.offers a');
+	});
+</script>
+<script type="text/javascript">
+	equalheight = function(container){
+	var currentTallest = 0,
+		 currentRowStart = 0,
+		 rowDivs = new Array(),
+		 $el,
+		 topPosition = 0;
+	 $(container).each(function() {
+	   $el = $(this);
+	   $($el).height('auto')
+	   topPostion = $el.position().top;
+	   if (currentRowStart != topPostion) {
+		 for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+		   rowDivs[currentDiv].height(currentTallest);
+		 }
+		 rowDivs.length = 0; // empty the array
+		 currentRowStart = topPostion;
+		 currentTallest = $el.height();
+		 rowDivs.push($el);
+	   } else {
+		 rowDivs.push($el);
+		 currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+	  }
+	   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+		 rowDivs[currentDiv].height(currentTallest);
+	   }
+	 });
+	}
+	$(window).load(function() {
+	  equalheight('.report-charge li');
+	});
+	$(window).resize(function(){
+	  equalheight('.report-charge li');
+	});
+</script>
+
+</body>
+</html>

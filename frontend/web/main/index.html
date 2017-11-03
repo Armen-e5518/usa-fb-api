@@ -1,0 +1,457 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>PoliceArrests.com</title>
+	<meta property="og:title" content="PoliceArrests.com - Search Police Arrest Records" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://www.policearrests.com" />
+	<meta property="og:image" content="http://www.policearrests.com/img/og_image.png" />
+	<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/responsive.css" rel="stylesheet" type="text/css">
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<!-- Slick Nav -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+	<script src="js/slicknav/jquery.slicknav.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#hnav').slicknav();
+		});
+	</script>
+	<!-- Accordion -->
+	<script type="text/javascript" src="js/accordion/accordion.js"></script>
+	<!-- Newsticker -->
+	<script type="text/javascript" src="js/newsticker/newsticker.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("ul#ticker01").liScroll();
+		});
+	</script>
+	<!-- Resizing Header On Scroll -->
+	<script src="js/header/classie.js"></script>
+	<script>
+		function init() {
+			window.addEventListener('scroll', function(e){
+				var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+					shrinkOn = 90,
+					header = document.querySelector("header");
+				if (distanceY > shrinkOn) {
+					classie.add(header,"smaller");
+				} else {
+					if (classie.has(header,"smaller")) {
+						classie.remove(header,"smaller");
+					}
+				}
+			});
+		}
+		window.onload = init();
+	</script>
+</head>
+<body>
+
+<!-- Header -->
+<header id="header">
+	<div class="wrapper cf">
+		<div class="site-logo"><a href="#">PoliceArrests.com</a></div>
+		<div class="hnav">
+			<ul id="hnav">
+				<li><a href="#"><i class="icn-hnav-home"></i>Home</a></li>
+				<li><a href="#"><i class="icn-hnav-statistics"></i>Statistics</a></li>
+				<li><a href="#"><i class="icn-hnav-recent"></i>Recent</a></li>
+				<li><a href="#"><i class="icn-hnav-states"></i>Arrests</a></li>
+				<li class="app-btn1"><a class="app-ios" href="#">Available on the App Store</a></li>
+				<li class="app-btn2"><a class="app-android" href="#">Android App on Google Play</a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<!-- // Header -->
+
+<!-- Download App -->
+<div class="app-download">
+	<div class="wrapper">
+		<h2>Download Our Mobile App:</h2>
+		<ul>
+			<li><a class="app-ios" href="#">Available on the App Store</a></li>
+			<li><a class="app-android" href="#">Android App on Google Play</a></li>
+		</ul>
+		<a class="btn-close" href="#" title="Close">Close</a>
+	</div>
+</div>
+<!-- // Download App -->
+
+<!-- Main -->
+<div id="main">
+
+	<!-- Search -->
+	<div id="search">
+		<div class="wrapper cf">
+			<div class="search-block cf">
+				<h2>Search Police Records</h2>
+				<div class="search-form cf">
+					<div class="row cf">
+						<div class="cell">
+							<label for="firstname">First Name<i>*</i></label>
+							<input id="firstname" type="text" name="firstname" value="" />
+						</div>
+						<div class="cell">
+							<label for="lastname">Last Name<i>*</i></label>
+							<input id="lastname" type="text" name="lastname" value="" />
+						</div>
+						<div class="cell">
+							<label for="state">State<i>*</i></label>
+							<select id="state" name="state"><option value="ALL">Nationwide</option><option value="AL">AL</option><option value="AK">AK</option><option value="AR">AR</option><option value="AZ">AZ</option><option value="CA">CA</option><option value="CO">CO</option><option value="CT">CT</option><option value="DC">DC</option><option value="DE">DE</option><option value="FL">FL</option><option value="GA">GA</option><option value="HI">HI</option><option value="IA">IA</option><option value="ID">ID</option><option value="IL">IL</option><option value="IN">IN</option><option value="KS">KS</option><option value="KY">KY</option><option value="LA">LA</option><option value="MA">MA</option><option value="MD">MD</option><option value="ME">ME</option><option value="MI">MI</option><option value="MN">MN</option><option value="MO">MO</option><option value="MS">MS</option><option value="MT">MT</option><option value="NE">NE</option><option value="NH">NH</option><option value="NJ">NJ</option><option value="NM">NM</option><option value="NV">NV</option><option value="NC">NC</option><option value="ND">ND</option><option value="NY">NY</option><option value="OH">OH</option><option value="OK">OK</option><option value="OR">OR</option><option value="PA">PA</option><option value="RI">RI</option><option value="SD">SD</option><option value="SC">SC</option><option value="TN">TN</option><option value="TX">TX</option><option value="UT">UT</option><option value="VA">VA</option><option value="VT">VT</option><option value="WA">WA</option><option value="WI">WI</option><option value="WV">WV</option><option value="WY">WY</option></select>
+						</div>
+						<div class="cell btn"><input type="submit" name="submit" value="Search Now" /></div>
+					</div>
+					<div class="accordion">
+						<a class="accordion-title" href="#accordion-1">Advanced Options</a>
+						<div id="accordion-1" class="accordion-content">
+							<div class="row cf">
+								<div class="cell">
+									<label for="from">Start Date</label>
+									<input id="from" class="input-date" type="text" name="from" />
+								</div>
+								<div class="cell">
+									<label for="to">End Date</label>
+									<input id="to" class="input-date" type="text" name="to" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="search-bg search-bg-01"></div>
+		</div>
+	</div>
+	<!-- // Search -->
+
+	<!-- Recently Arrested -->
+	<div class="recent cf">
+		<div class="recent-title">Recently Arrested</div>
+		<div class="recent-content">
+			<div class="recent-content-inn">
+				<ul id="ticker01">
+					<li><a href="#">Thomas William Smith</a> arrested in McLeod county, Minnesota on 2015-03-23</li>
+					<li><a href="#">Thomas William Smith</a> arrested in McLeod county, Minnesota on 2015-03-23</li>
+					<li><a href="#">Thomas William Smith</a> arrested in McLeod county, Minnesota on 2015-03-23</li>
+					<li><a href="#">Thomas William Smith</a> arrested in McLeod county, Minnesota on 2015-03-23</li>
+					<li><a href="#">Thomas William Smith</a> arrested in McLeod county, Minnesota on 2015-03-23</li>
+					<li><a href="#">Thomas William Smith</a> arrested in McLeod county, Minnesota on 2015-03-23</li>
+					<li><a href="#">Thomas William Smith</a> arrested in McLeod county, Minnesota on 2015-03-23</li>
+					<li><a href="#">Thomas William Smith</a> arrested in McLeod county, Minnesota on 2015-03-23</li>
+					<li><a href="#">Thomas William Smith</a> arrested in McLeod county, Minnesota on 2015-03-23</li>
+					<li><a href="#">Thomas William Smith</a> arrested in McLeod county, Minnesota on 2015-03-23</li>
+					<li><a href="#">Thomas William Smith</a> arrested in McLeod county, Minnesota on 2015-03-23</li>
+					<li><a href="#">Thomas William Smith</a> arrested in McLeod county, Minnesota on 2015-03-23</li>
+					<li><a href="#">Thomas William Smith</a> arrested in McLeod county, Minnesota on 2015-03-23</li>
+				</ul>
+				<a class="btn-close" href="#" title="Close">Close</a>
+			</div>
+		</div>
+	</div>
+	<!-- // Recently Arrested -->
+
+	<!-- How Police Arrests Work? -->
+	<div class="section section-dark">
+		<div class="wrapper cf">
+			<div class="block benefits cf">
+				<div class="cell">
+					<div class="benefit benefit-01"><span>Search over 800,000,000 arrest and criminal records</span></div>
+				</div>
+				<div class="cell">
+					<div class="benefit benefit-02"><span>View Mugshots and arrest details, including multiple charges</span></div>
+				</div>
+				<div class="cell">
+					<div class="benefit benefit-03"><span>Arrest and Criminal records for free</span></div>
+				</div>
+			</div>
+			<div class="block">
+				<h2 class="hiw-title">How Police Arrests Work?</h2>
+				<h3 class="hiw-title">PoliceArrests.com receives daily live data from all over USA on recent arrests.</h3>
+			</div>
+			<div class="block hiw cf">
+				<div class="row cf">
+					<div class="cell hiw-01">
+						<div class="hiw-header"><i>1</i> Arrest</div>
+						<div class="hiw-body">Once Police Officer has a probably cause they can arrest someone</div>
+					</div>
+					<div class="cell hiw-02">
+						<div class="hiw-header"><i>2</i> Booking</div>
+						<div class="hiw-body">After arrest, the person is booked as a suspect</div>
+					</div>
+					<div class="cell hiw-03">
+						<div class="hiw-header"><i>3</i> Information</div>
+						<div class="hiw-body">Suspect’s information and the crime details are recorded</div>
+					</div>
+					<div class="cell hiw-04">
+						<div class="hiw-header"><i>4</i> Mugshot</div>
+						<div class="hiw-body">Mugshot of the suspect is taken</div>
+					</div>
+					<div class="cell hiw-05">
+						<div class="hiw-header"><i>5</i> Fingerprints</div>
+						<div class="hiw-body">Police also takes the fingerprints</div>
+					</div>
+					<div class="cell hiw-06">
+						<div class="hiw-header"><i>6</i> Warrants</div>
+						<div class="hiw-body">Suspect is investigated for warrants</div>
+					</div>
+					<div class="cell hiw-07">
+						<div class="hiw-header"><i>7</i> Health</div>
+						<div class="hiw-body">Police pass a Health screening of the suspect to protect the jail officials and inmates</div>
+					</div>
+					<div class="cell hiw-08">
+						<div class="hiw-header"><i>8</i> Distribution</div>
+						<div class="hiw-body">Booking information is distributed to other law enforcement agencies, media and web</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // How Police Arrests Work? -->
+
+	<!-- Browse -->
+	<div class="section section-light">
+		<div class="wrapper cf">
+			<div class="block">
+				<h1 class="browse-title">Browse recent Police Arrests by State</h1>
+			</div>
+			<div class="block">
+				<div class="links-list states four-rows cf">
+					<ul>
+						<li><a class="nationwide" href="/browse/ALL">Nationwide</a></li>
+						<li><a class="al" href="/browse/AL">Alabama</a></li>
+						<li><a class="ak" href="/browse/AK">Alaska</a></li>
+						<li><a class="az" href="/browse/AZ">Arizona</a></li>
+						<li><a class="ar" href="/browse/AR">Arkansas</a></li>
+						<li><a class="ca" href="/browse/CA">California</a></li>
+						<li><a class="co" href="/browse/CO">Colorado</a></li>
+						<li><a class="ct" href="/browse/CT">Connecticut</a></li>
+						<li><a class="dc" href="/browse/DC">District of Columbia</a></li>
+						<li><a class="de" href="/browse/DE">Delaware</a></li>
+						<li><a class="fl" href="/browse/FL">Florida</a></li>
+						<li><a class="ga" href="/browse/GA">Georgia</a></li>
+						<li><a class="hi" href="/browse/HI">Hawaii</a></li>
+						<li><a class="id" href="/browse/ID">Idaho</a></li>
+						<li><a class="il" href="/browse/IL">Illinois</a></li>
+						<li><a class="in" href="/browse/IN">Indiana</a></li>
+						<li><a class="ia" href="/browse/IA">Iowa</a></li>
+						<li><a class="ks" href="/browse/KS">Kansas</a></li>
+						<li><a class="ky" href="/browse/KY">Kentucky</a></li>
+						<li><a class="la" href="/browse/LA">Louisiana</a></li>
+						<li><a class="me" href="/browse/ME">Maine</a></li>
+						<li><a class="md" href="/browse/MD">Maryland</a></li>
+						<li><a class="ma" href="/browse/MS">Massachusetts</a></li>
+						<li><a class="mi" href="/browse/MI">Michigan</a></li>
+						<li><a class="mn" href="/browse/MN">Minnesota</a></li>
+						<li><a class="ms" href="/browse/MS">Mississippi</a></li>
+						<li><a class="mo" href="/browse/MO">Missouri</a></li>
+						<li><a class="mt" href="/browse/MT">Montana</a></li>
+						<li><a class="ne" href="/browse/NE">Nebraska</a></li>
+						<li><a class="nv" href="/browse/NV">Nevada</a></li>
+						<li><a class="nh" href="/browse/NH">New Hampshire</a></li>
+						<li><a class="nj" href="/browse/NJ">New Jersey</a></li>
+						<li><a class="nm" href="/browse/NM">New Mexico</a></li>
+						<li><a class="ny" href="/browse/NY">New York</a></li>
+						<li><a class="nc" href="/browse/NC">North Carolina</a></li>
+						<li><a class="nd" href="/browse/ND">North Dakota</a></li>
+						<li><a class="oh" href="/browse/OH">Ohio</a></li>
+						<li><a class="ok" href="/browse/OK">Oklahoma</a></li>
+						<li><a class="or" href="/browse/OR">Oregon</a></li>
+						<li><a class="pa" href="/browse/PA">Pennsylvania</a></li>
+						<li><a class="ri" href="/browse/RI">Rhode Island</a></li>
+						<li><a class="sc" href="/browse/SC">South Carolina</a></li>
+						<li><a class="sd" href="/browse/SD">South Dakota</a></li>
+						<li><a class="tn" href="/browse/TN">Tennessee</a></li>
+						<li><a class="tx" href="/browse/TX">Texas</a></li>
+						<li><a class="ut" href="/browse/UT">Utah</a></li>
+						<li><a class="vt" href="/browse/VT">Vermont</a></li>
+						<li><a class="va" href="/browse/VA">Virginia</a></li>
+						<li><a class="wa" href="/browse/WA">Washington</a></li>
+						<li><a class="wv" href="/browse/WV">West Virginia</a></li>
+						<li><a class="wi" href="/browse/WI">Wisconsin</a></li>
+						<li><a class="wy" href="/browse/WY">Wyoming</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // Browse -->
+
+	<!-- Safe -->
+	<div class="keep-safe">
+		<div class="wrapper cf">
+			<h2 class="safe-title">Keep your family safe, check the criminal past of people you interact with</h2>
+			<div class="safe-btn">
+				<a class="btn btn-big btn-special" href="#">Start Search</a>
+			</div>
+		</div>
+	</div>
+	<!-- // Safe -->
+
+	<!-- Booking Process -->
+	<div class="booking-process section-light section">
+		<div class="wrapper cf">
+			<div class="content cf">
+				<h3><i>Policearrests.com</i> booking process</h3>
+				<img style="float:right; margin-left:30px;" src="img/hp_image_01.png" alt="Policearrests.com">
+				<p>The law requires documentation through paper and electronic records of every step of a criminal arrest – but that doesn’t mean arrests always look like the ones you see on television. Police work is more mundane and paperwork-intensive than 30 minute dramas would lead you to believe.</p>
+				<p>There’s a lot more to daily police work than speed traps and getting cats out of trees. Police at the front line of community response are continually tasked with additional duties, whether or not technology and support services are in place. For instance, a community may have an issue with cars ignoring flashing lights on school buses, putting children at risk. Due to the immediacy of the threat, police would be told to find a solution despite police officers having a full slate of tasks from writing incident reports to investigating crimes and serving warrants. Likewise, fugitives may slip through their hands because record keeping is not up to date at a court house or because warrants are not entered into a database that officers on the street have access to.</p>
+				<h3>History</h3>
+				<img style="float:left; margin-right:30px;" src="img/hp_image_02.png" alt="Policearrests.com">
+				<p>Policing in America has continually morphed and expanded since 1800 when our agrarian forefathers found better-paying jobs in industry, moved into growing cities and started spending discretionary earnings in taverns and brothels. America’s beacon as a land of opportunity created large cities of immigrants and itinerants, driving the demand for a police force armed and equipped to quell disputes.</p>
+				<p>Slowly, in fits and starts, the policing model we see today has emerged. Police have computers in their vehicles that rival NASA’s Mars Rover expedition, and most jurisdictions require officers on the street to recognize and handle social ills from homelessness to domestic violence to runaways, yet be equipped and educated about the potential of workplace violence by armed gunmen.</p>
+				<h3>Steps in the arrest process</h3>
+				<img style="float:right; margin-left:30px;" src="img/hp_image_03.png" alt="Policearrests.com">
+				<p>Justification for arresting a person is established in one of many ways, such as: by witnessing a crime (e.g. police catching a man running out of a bank with a bag of money in his hand), the testimony of witnesses (e.g. people who were in the bank during the robbery and identified the robber), or by establishing probable cause (e.g. finding an empty bank bag in a car owned by a person who fits the robber’s physical description).</p>
+				<p>Oftentimes a warrant is required to arrest someone. In that case, police document their evidence pointing to an individual responsible for a crime, then ask a judge to review that evidence and issue a warrant, which is a written document demanding the person’s arrest.</p>
+				<p>Police are required to read a detained suspect his Miranda Rights (admonishing a suspect that he may refuse to speak until he has the opportunity to consult with an attorney) but that doesn’t always happen when he’s being handcuffed, as police on television shows always seem to do. In fact, police are allowed to wait until a suspect in detention (arrested) is about to be interrogated before they are required to tell him he has the right to remain silent. Police are not required to warn a suspect that anything he says during the arrest and booking process may be used as evidence in a criminal trial.</p>
+				<p>If the criminal offense rises to the level of a felony due to a combination of circumstances, like murder during a burglary, a grand jury may be seated to hear the facts brought by prosecutors in order to proceed with a felony-level case that can be punishable by a long prison sentence or the death penalty. A grand jury’s decision in favor of going to trial on such a case is called an indictment.</p>
+				<h3>Booking process</h3>
+				<img style="float:left; margin-right:30px;" src="img/hp_image_04.png" alt="Policearrests.com">
+				<p>In addition to all of the documentary evidence leading up to an arrest (in addition to police reports, which lay out witnesses’ testimony and physical evidence), more is created when an arrest actually takes place. The following steps come under the general term “booking” which means the same as processing a prisoner.</p>
+				<p><strong>Fingerprinting:</strong> When arrested, an individual’s fingertips are rolled through ink and pressed onto paper creating an indelible record of the event. The unique characteristics of fingerprints were recognized as personal “seals” or affirmations, like a signature, as far back as ancient Babylonia and China, where fingerprints were pressed into clay tablets as part of business agreements. The first known use of fingerprints for identifying a criminal suspect was in Argentina in 1891, but their study and use in the United States didn’t begin until decades later. By the 1940s, suspected criminals and all U.S. military personnel were fingerprinted, creating a manual databank of more than 100 million prints at the federal government level.</p>
+				<p><strong>Mug shot:</strong> Photographs of suspects are taken during booking to allow police to compare with other known criminals (not all provide their correct name or birth date) and to be used in photo line-ups that are shown to witnesses. Photos may also be taken of identifying marks on the suspect’s body, such as tattoos or unusual scars, as identification.</p>
+				<p><strong>Warrants:</strong> When suspects are processed, their names, birthdates, aliases, and photos are shared and compared with others in regional and national databases to check for outstanding warrants, like probation violations or failure to show up for a court date. According to recent history of New York City’s policing tactics, arresting and processing even petty criminals for things like evading subway fares lead to many warrant arrests and a generally cleaner, safer city for the majority of residents in the 1990s to today. However, there has been significant backlash for the strategy as minorities were unequally targeted and Civil Rights likely disregarded in the process.</p>
+				<img style="float:right; margin-left:30px;" src="img/hp_image_05.png" alt="Policearrests.com">
+				<p><strong>Health:</strong> Screening for health issues is done during the booking process to protect police and other inmates from potentially communicable diseases and to check for evidence of drug use.</p>
+				<p><strong>Distribution:</strong> Most of the information gathered during a suspect’s booking on suspicion of criminal wrongdoing is available to the public, however police will withhold any ongoing investigation (e.g. information linking the suspect to suspected crimes beyond those he has been arrested for) and any health information.</p>
+				<p><strong>Bail or pretrial hearing:</strong> Once an arrest takes place, a judge is the only one who can set you free. Generally, hearings before a judge take place the morning after an arrest, when the local judge will evaluate all of the information available about you, the circumstances of your arrest, the severity of the crime, and your likelihood to re-offend. This gives the judge a lot of leeway to decide whether you can be set free on your Own Recognizance (promising to come back to court on an appointed date) or if you must be bailed out (posting a sum of money as a promise to come back to court on an appointed date).</p>
+				<p>An arrest can be a temporary embarrassment or it may lead to a lifetime of hassles. Most states allow arrest records to be expunged or sealed if no conviction resulted.</p>
+			</div>
+		</div>
+	</div>
+	<!-- // Booking Process -->
+
+	<!-- TV Channels -->
+	<div class="section section-dark">
+		<div class="wrapper cf">
+			<h2 class="channels-title">Various police arrests have been shown on all major news channels</h2>
+			<div class="channels cf">
+				<ul>
+					<li><img src="img/channel_logo_cnn.png" alt=""></li>
+					<li><img src="img/channel_logo_bbc.png" alt=""></li>
+					<li><img src="img/channel_logo_fox_news.png" alt=""></li>
+					<li><img src="img/channel_logo_abc.png" alt=""></li>
+					<li><img src="img/channel_logo_sky_news.png" alt=""></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- // TV Channels -->
+
+</div>
+<!-- // Main -->
+
+<!-- Footer -->
+<footer id="footer">
+	<div class="wrapper cf">
+		<div class="fblock fnav cf">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Browse</a></li>
+				<li><a href="#">Statistics</a></li>
+				<li><a href="#">Recent</a></li>
+				<li><a href="#">States</a></li>
+				<li><a href="#">Terms</a></li>
+				<li><a href="#">Privacy</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		<div class="fblock fcopy cf">
+			<p>&copy; 2016 PoliceArrests. All rights reserved.</p>
+		</div>
+		<div class="fblock fshare cf">
+			<ul>
+				<li><a class="fb" href="#">Facebook</a></li>
+				<li><a class="tw" href="#">Twitter</a></li>
+				<li><a class="gp" href="#">Google Plus</a></li>
+			</ul>
+		</div>
+		<div class="fblock fdisc cf">
+			<p>The information that makes up our search results is largely derived from public sources, which originate and/or aggregate such information. PoliceArrests.com does not originate, verify, or guarantee the accuracy of any information provide via search results. Search results may be out of date or otherwise no longer applicable.</p>
+			<p>PoliceArrests.com is not a "consumer reporting agency" as defined by Fair Credit Reporting Act. Our Terms of Service prohibit the use of PoliceArrests.com to determine an individual's eligibility for personal credit or employment, tenant screening, or other business transactions, or for any unlawful purposes such as stalking or harassing others. Such use of PoliceArrests.com may subject you to civil and criminal litigation and penalties.</p>
+			<p>Your use of PoliceArrests.com is conditioned on your full compliance with our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+		</div>
+	</div>
+</footer>
+<!-- // Footer -->
+
+<!-- Equal Height For Homepage Elements -->
+<script type="text/javascript">
+	equalheight = function(container){
+	var currentTallest = 0,
+		 currentRowStart = 0,
+		 rowDivs = new Array(),
+		 $el,
+		 topPosition = 0;
+	 $(container).each(function() {
+	   $el = $(this);
+	   $($el).height('auto')
+	   topPostion = $el.position().top;
+	   if (currentRowStart != topPostion) {
+		 for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+		   rowDivs[currentDiv].height(currentTallest);
+		 }
+		 rowDivs.length = 0; // empty the array
+		 currentRowStart = topPostion;
+		 currentTallest = $el.height();
+		 rowDivs.push($el);
+	   } else {
+		 rowDivs.push($el);
+		 currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+	  }
+	   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+		 rowDivs[currentDiv].height(currentTallest);
+	   }
+	 });
+	}
+	$(window).load(function() {
+	  equalheight('.benefits .benefit');
+	});
+	$(window).resize(function(){
+	  equalheight('.benefits .benefit');
+	});
+</script>
+<script type="text/javascript">
+	equalheight = function(container){
+	var currentTallest = 0,
+		 currentRowStart = 0,
+		 rowDivs = new Array(),
+		 $el,
+		 topPosition = 0;
+	 $(container).each(function() {
+	   $el = $(this);
+	   $($el).height('auto')
+	   topPostion = $el.position().top;
+	   if (currentRowStart != topPostion) {
+		 for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+		   rowDivs[currentDiv].height(currentTallest);
+		 }
+		 rowDivs.length = 0; // empty the array
+		 currentRowStart = topPostion;
+		 currentTallest = $el.height();
+		 rowDivs.push($el);
+	   } else {
+		 rowDivs.push($el);
+		 currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+	  }
+	   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+		 rowDivs[currentDiv].height(currentTallest);
+	   }
+	 });
+	}
+	$(window).load(function() {
+	  equalheight('.hiw .cell');
+	});
+	$(window).resize(function(){
+	  equalheight('.hiw .cell');
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>PoliceArrests.com</title>
+	<meta property="og:title" content="PoliceArrests.com - Search Police Arrest Records" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://www.policearrests.com" />
+	<meta property="og:image" content="http://www.policearrests.com/img/og_image.png" />
+	<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/responsive.css" rel="stylesheet" type="text/css">
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<!-- Slick Nav -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+	<script src="js/slicknav/jquery.slicknav.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#hnav').slicknav();
+		});
+	</script>
+	<!-- Accordion -->
+	<script type="text/javascript" src="js/accordion/accordion.js"></script>
+	<!-- Newsticker -->
+	<script type="text/javascript" src="js/newsticker/newsticker.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("ul#ticker01").liScroll();
+		});
+	</script>
+	<!-- Resizing Header On Scroll -->
+	<script src="js/header/classie.js"></script>
+	<script>
+		function init() {
+			window.addEventListener('scroll', function(e){
+				var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+					shrinkOn = 90,
+					header = document.querySelector("header");
+				if (distanceY > shrinkOn) {
+					classie.add(header,"smaller");
+				} else {
+					if (classie.has(header,"smaller")) {
+						classie.remove(header,"smaller");
+					}
+				}
+			});
+		}
+		window.onload = init();
+	</script>
+	<!-- Profiles -->
+	<link href="css/slick/slick.css" rel="stylesheet" type="text/css">
+	<script src="//code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+	<script src="js/slick/slick.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.profiles').slick({
+				speed: 300,
+				slidesToShow: 6,
+				slidesToScroll: 3,
+				autoplay: true,
+				autoplaySpeed: 3000,
+				responsive: [
+					{
+						breakpoint: 1279,
+						settings: {
+							slidesToShow: 5,
+							slidesToScroll: 2
+						}
+					},
+					{
+						breakpoint: 959,
+						settings: {
+							slidesToShow: 4,
+							slidesToScroll: 2
+						}
+					},
+					{
+						breakpoint: 719,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 1
+						}
+					},
+					{
+						breakpoint: 479,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1
+						}
+					}
+				]
+			});
+		});
+	</script>
+</head>
+<body>
+
+<!-- Header -->
+<header id="header">
+	<div class="wrapper cf">
+		<div class="site-logo"><a href="#">PoliceArrests.com</a></div>
+		<div class="hnav">
+			<ul id="hnav">
+				<li><a href="#"><i class="icn-hnav-home"></i>Home</a></li>
+				<li><a href="#"><i class="icn-hnav-statistics"></i>Statistics</a></li>
+				<li><a href="#"><i class="icn-hnav-recent"></i>Recent</a></li>
+				<li><a href="#"><i class="icn-hnav-states"></i>Arrests</a></li>
+				<li class="app-btn1"><a class="app-ios" href="#">Available on the App Store</a></li>
+				<li class="app-btn2"><a class="app-android" href="#">Android App on Google Play</a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<!-- // Header -->
+
+<!-- Download App -->
+<div class="app-download">
+	<div class="wrapper">
+		<h2>Download Our Mobile App:</h2>
+		<ul>
+			<li><a class="app-ios" href="#">Available on the App Store</a></li>
+			<li><a class="app-android" href="#">Android App on Google Play</a></li>
+		</ul>
+		<a class="btn-close" href="#" title="Close">Close</a>
+	</div>
+</div>
+<!-- // Download App -->
+
+<!-- Main -->
+<div id="main">
+
+	<!-- Search -->
+	<div id="search2">
+		<div class="wrapper cf">
+			<div class="search-form cf">
+				<div class="row cf">
+					<div class="cell">
+						<input id="firstname" type="text" name="firstname" value="" placeholder="First Name" />
+					</div>
+					<div class="cell">
+						<input id="lastname" type="text" name="lastname" value="" placeholder="Last Name" />
+					</div>
+					<div class="cell">
+						<select id="state" name="state"><option value="" selected>Select State</option><option value="ALL">Nationwide</option><option value="AL">AL</option><option value="AK">AK</option><option value="AR">AR</option><option value="AZ">AZ</option><option value="CA">CA</option><option value="CO">CO</option><option value="CT">CT</option><option value="DC">DC</option><option value="DE">DE</option><option value="FL">FL</option><option value="GA">GA</option><option value="HI">HI</option><option value="IA">IA</option><option value="ID">ID</option><option value="IL">IL</option><option value="IN">IN</option><option value="KS">KS</option><option value="KY">KY</option><option value="LA">LA</option><option value="MA">MA</option><option value="MD">MD</option><option value="ME">ME</option><option value="MI">MI</option><option value="MN">MN</option><option value="MO">MO</option><option value="MS">MS</option><option value="MT">MT</option><option value="NE">NE</option><option value="NH">NH</option><option value="NJ">NJ</option><option value="NM">NM</option><option value="NV">NV</option><option value="NC">NC</option><option value="ND">ND</option><option value="NY">NY</option><option value="OH">OH</option><option value="OK">OK</option><option value="OR">OR</option><option value="PA">PA</option><option value="RI">RI</option><option value="SD">SD</option><option value="SC">SC</option><option value="TN">TN</option><option value="TX">TX</option><option value="UT">UT</option><option value="VA">VA</option><option value="VT">VT</option><option value="WA">WA</option><option value="WI">WI</option><option value="WV">WV</option><option value="WY">WY</option></select>
+					</div>
+					<div class="cell btn"><input type="submit" name="submit" value="Search Now" /></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // Search -->
+
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs">
+		<div class="wrapper cf">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Police Arrests</a></li>
+				<li><a href="#">John</a></li>
+				<li>John Smith</li>
+			</ul>
+			<a class="print-page" href="#" title="Print"></a>
+		</div>
+	</div>
+	<!-- // Breadcrumbs -->
+
+	<!-- Report -->
+	<div class="section section-dark">
+		<div class="wrapper cf">
+			<div class="report cf">
+				<div class="block">
+					<h2 class="report-title">Police Report for <span>John Smith</span></h2>
+					<h3 class="report-title">Police Arrests Record ID: <span>XXXXXXX</span></h3>
+				</div>
+				<div class="report-block cf">
+					<div class="report-sidebar">
+						<div class="report-img"><img src="img/no_image.png" alt=""></div>
+						<div class="report-btn"><a class="btn btn-med" href="#">BUY FULL REPORT</a></div>
+					</div>
+					<div class="report-content">
+						<div class="report-content-inn">
+							<div class="report-row cf">
+								<table>
+									<tr>
+										<td class="special">Suspect First Name <div class="value">John</div></td>
+										<td class="special">Suspect Last Name <div class="value">Smith</div></td>
+										<td class="special">Suspect Middle Name <div class="value">T</div></td>
+									</tr>
+								</table>
+							</div>
+							<div class="report-row cf">
+								<table>
+									<tr>
+										<td>Aliases <div class="value">Johnny, Joe, J</div></td>
+									</tr>
+								</table>
+							</div>
+							<div class="report-row cf">
+								<table>
+									<tr>
+										<td>Date of Birth <div class="value">01/02/1971</div></td>
+										<td>Age <div class="value">44</div></td>
+										<td>Sex <div class="value">M</div></td>
+										<td>Race <div class="value">W</div></td>
+										<td>Ethnicity <div class="value">W</div></td>
+									</tr>
+								</table>
+							</div>
+							<div class="report-row cf">
+								<table>
+									<tr>
+										<td>Height <div class="value">1'77"</div></td>
+										<td>Weight <div class="value">87</div></td>
+										<td>Heir <div class="value">BRO</div></td>
+										<td>Eye <div class="value">GRN</div></td>
+										<td>Place of Birth <div class="value">Massachusetts</div></td>
+									</tr>
+								</table>
+							</div>
+							<div class="report-row cf">
+								<table>
+									<tr>
+										<td>Profession/Occupation <div class="value">Teacher</div></td>
+									</tr>
+								</table>
+							</div>
+							<div class="report-row cf">
+								<table>
+									<tr>
+										<td>Summary <div class="value">
+											<p>TYLER W MARTIN, 41 years old, was arrested on 1 Misdemeanor Count(s) of 843.02. charges in FL. TYLER was born on 12/06/1972, and currently resides at 9 CHESTER ST, FALMOUTH, MA, 02556. TYLER W MARTIN is described as a white male,, according to FL Monroe Arrest. The case number XXXXX was heard in Monroe court. The record ID number for this arrest is 21401597, according to ARSTmonroefl.</p>
+											<p>TYLER W MARTIN is presumed innocent until proven guilty in a court of law.</p>
+											<p>This record was collected from a Law Enforcement agency.</p>
+										</div></td>
+									</tr>
+								</table>
+								<div class="report-btn"><a class="btn btn-med" href="#">BUY FULL REPORT</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="report-block cf">
+					<div class="report-row cf">
+						<table>
+							<tr>
+								<td class="special">Statute code/Charge <div class="value">I18-3316(1) - Firearm Possession Convict Fel</div></td>
+								<td class="special">Level <div class="value">Misdemeanor</div></td>
+							</tr>
+						</table>
+					</div>
+					<div class="report-row cf">
+						<div class="report-charge cf">
+							<ul>
+								<li><span><i class="ctitle">Statute:</i> <i class="cvalue">19-512-1A</i></span></li>
+								<li><span><i class="ctitle">Case No:</i> <i class="cvalue">XXXXX</i></span></li>
+								<li><span><i class="ctitle">Charge:</i> <i class="cvalue">Ada County Hold</i></span></li>
+								<li><span><i class="ctitle">Degree:</i> <i class="cvalue">7</i></span></li>
+								<li><span><i class="ctitle">Level:</i> <i class="cvalue">Misdemeanor</i></span></li>
+								<li><span><i class="ctitle">Bond:</i> <i class="cvalue">Bond</i></span></li>
+								<li><span><i class="ctitle">Sentence:</i> <i class="cvalue">Sentence</i></span></li>
+								<li><span><i class="ctitle">Offense Date:</i> <i class="cvalue">01/01/2001</i></span></li>
+								<li><span><i class="ctitle">Court Type:</i> <i class="cvalue">Court Type</i></span></li>
+								<li><span><i class="ctitle">Bond Type:</i> <i class="cvalue">Bond Type</i></span></li>
+								<li><span><i class="ctitle">Charging Agency:</i> <i class="cvalue">Some Charging Agency</i></span></li>
+								<li><span><i class="ctitle">Arresting Agency:</i> <i class="cvalue">Some Arresting Agency</i></span></li>
+							</ul>
+							<div class="report-btn"><a class="btn btn-med" href="#">BUY FULL REPORT</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="report-block cf">
+					<div class="report-row cf">
+						<table>
+							<tr>
+								<td class="special">Statute code/Charge <div class="value">I18-3316(1) - Firearm Possession Convict Fel</div></td>
+								<td class="special">Level <div class="value">Misdemeanor</div></td>
+							</tr>
+						</table>
+					</div>
+					<div class="report-row cf">
+						<div class="report-charge cf">
+							<ul>
+								<li><span><i class="ctitle">Statute:</i> <i class="cvalue">19-512-1A</i></span></li>
+								<li><span><i class="ctitle">Case No:</i> <i class="cvalue">XXXXX</i></span></li>
+								<li><span><i class="ctitle">Charge:</i> <i class="cvalue">Ada County Hold</i></span></li>
+								<li><span><i class="ctitle">Degree:</i> <i class="cvalue">7</i></span></li>
+								<li><span><i class="ctitle">Level:</i> <i class="cvalue">Misdemeanor</i></span></li>
+								<li><span><i class="ctitle">Bond:</i> <i class="cvalue">Bond</i></span></li>
+								<li><span><i class="ctitle">Sentence:</i> <i class="cvalue">Sentence</i></span></li>
+								<li><span><i class="ctitle">Offense Date:</i> <i class="cvalue">01/01/2001</i></span></li>
+								<li><span><i class="ctitle">Court Type:</i> <i class="cvalue">Court Type</i></span></li>
+								<li><span><i class="ctitle">Bond Type:</i> <i class="cvalue">Bond Type</i></span></li>
+								<li><span><i class="ctitle">Charging Agency:</i> <i class="cvalue">Some Charging Agency</i></span></li>
+								<li><span><i class="ctitle">Arresting Agency:</i> <i class="cvalue">Some Arresting Agency</i></span></li>
+							</ul>
+							<div class="report-btn"><a class="btn btn-med" href="#">BUY FULL REPORT</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="report-block cf">
+					<div class="report-row cf">
+						<table>
+							<tr>
+								<td class="special">Statute code/Charge <div class="value">I18-3316(1) - Firearm Possession Convict Fel</div></td>
+								<td class="special">Level <div class="value">Misdemeanor</div></td>
+							</tr>
+						</table>
+					</div>
+					<div class="report-row cf">
+						<div class="report-charge cf">
+							<ul>
+								<li><span><i class="ctitle">Statute:</i> <i class="cvalue">19-512-1A</i></span></li>
+								<li><span><i class="ctitle">Case No:</i> <i class="cvalue">XXXXX</i></span></li>
+								<li><span><i class="ctitle">Charge:</i> <i class="cvalue">Ada County Hold Ada County Hold Ada County Hold</i></span></li>
+								<li><span><i class="ctitle">Degree:</i> <i class="cvalue">7</i></span></li>
+								<li><span><i class="ctitle">Level:</i> <i class="cvalue">Misdemeanor</i></span></li>
+								<li><span><i class="ctitle">Bond:</i> <i class="cvalue">Bond</i></span></li>
+								<li><span><i class="ctitle">Sentence:</i> <i class="cvalue">Sentence</i></span></li>
+								<li><span><i class="ctitle">Offense Date:</i> <i class="cvalue">01/01/2001</i></span></li>
+								<li><span><i class="ctitle">Court Type:</i> <i class="cvalue">Court Type</i></span></li>
+								<li><span><i class="ctitle">Bond Type:</i> <i class="cvalue">Bond Type</i></span></li>
+								<li><span><i class="ctitle">Charging Agency:</i> <i class="cvalue">Some Charging Agency</i></span></li>
+								<li><span><i class="ctitle">Arresting Agency:</i> <i class="cvalue">Some Arresting Agency</i></span></li>
+							</ul>
+							<div class="report-btn"><a class="btn btn-med" href="#">BUY FULL REPORT</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="report-block cf">
+					<div class="report-row cf">
+						<table>
+							<tr>
+								<td class="special">Full Report <div class="value">Full Report Details are Available to Registered Users Only!</div></td>
+							</tr>
+						</table>
+					</div>
+					<div class="report-upsell cf">
+						<div class="upsell-block">
+							<div class="up-btn"><a href="#">Get Full Report</a></div>
+							<div class="up-note">*Average report length is 21 pages</div>
+						</div>
+						<div class="cell"><img src="img/upsell_text_01.jpg" alt=""></div>
+						<div class="cell"><img src="img/upsell_text_02.jpg" alt=""></div>
+					</div>
+				</div>
+				<div class="disclaimer">
+					<p><strong>DISCLAIMER:</strong> Arrest records of [NAME] are public documents for informational purposes only. All suspects are considered innocent until proven guilty, and publication here does not indicate that [NAME] has committed a criminal offense. This information should not be used to determine [NAME]’s eligibility for credit, employment, housing or other business transactions. Contact the law enforcement officials at [FULL STATE NAME] for further information on [NAME]’s legal status.</p>
+				</div>
+				<div class="profiles-block block cf">
+					<h3>Recently Arrested in <i>Greene County</i>, <i>Missouri</i></h3>
+					<div class="profiles cf">
+						<div class="slide"><a href="#"><img src="img/no_image.png" alt="">John T Smith</a></div>
+						<div class="slide"><a href="#"><img src="img/no_image.png" alt="">John T Smith</a></div>
+						<div class="slide"><a href="#"><img src="img/no_image.png" alt="">John T Smith</a></div>
+						<div class="slide"><a href="#"><img src="img/no_image.png" alt="">John T Smith</a></div>
+						<div class="slide"><a href="#"><img src="img/no_image.png" alt="">John T Smith</a></div>
+						<div class="slide"><a href="#"><img src="img/no_image.png" alt="">John T Smith</a></div>
+						<div class="slide"><a href="#"><img src="img/no_image.png" alt="">John T Smith</a></div>
+						<div class="slide"><a href="#"><img src="img/no_image.png" alt="">John T Smith</a></div>
+						<div class="slide"><a href="#"><img src="img/no_image.png" alt="">John T Smith</a></div>
+						<div class="slide"><a href="#"><img src="img/no_image.png" alt="">John T Smith</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // Report -->
+
+</div>
+<!-- // Main -->
+
+<!-- Footer -->
+<footer id="footer">
+	<div class="wrapper cf">
+		<div class="fblock fnav cf">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Browse</a></li>
+				<li><a href="#">Statistics</a></li>
+				<li><a href="#">Recent</a></li>
+				<li><a href="#">States</a></li>
+				<li><a href="#">Terms</a></li>
+				<li><a href="#">Privacy</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		<div class="fblock fcopy cf">
+			<p>&copy; 2016 PoliceArrests. All rights reserved.</p>
+		</div>
+		<div class="fblock fshare cf">
+			<ul>
+				<li><a class="fb" href="#">Facebook</a></li>
+				<li><a class="tw" href="#">Twitter</a></li>
+				<li><a class="gp" href="#">Google Plus</a></li>
+			</ul>
+		</div>
+		<div class="fblock fdisc cf">
+			<p>The information that makes up our search results is largely derived from public sources, which originate and/or aggregate such information. PoliceArrests.com does not originate, verify, or guarantee the accuracy of any information provide via search results. Search results may be out of date or otherwise no longer applicable.</p>
+			<p>PoliceArrests.com is not a "consumer reporting agency" as defined by Fair Credit Reporting Act. Our Terms of Service prohibit the use of PoliceArrests.com to determine an individual's eligibility for personal credit or employment, tenant screening, or other business transactions, or for any unlawful purposes such as stalking or harassing others. Such use of PoliceArrests.com may subject you to civil and criminal litigation and penalties.</p>
+			<p>Your use of PoliceArrests.com is conditioned on your full compliance with our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+		</div>
+	</div>
+</footer>
+<!-- // Footer -->
+
+<!-- Equal Height For Arrest Record Page Elements -->
+<script type="text/javascript">
+	equalheight = function(container){
+	var currentTallest = 0,
+		 currentRowStart = 0,
+		 rowDivs = new Array(),
+		 $el,
+		 topPosition = 0;
+	 $(container).each(function() {
+	   $el = $(this);
+	   $($el).height('auto')
+	   topPostion = $el.position().top;
+	   if (currentRowStart != topPostion) {
+		 for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+		   rowDivs[currentDiv].height(currentTallest);
+		 }
+		 rowDivs.length = 0; // empty the array
+		 currentRowStart = topPostion;
+		 currentTallest = $el.height();
+		 rowDivs.push($el);
+	   } else {
+		 rowDivs.push($el);
+		 currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+	  }
+	   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+		 rowDivs[currentDiv].height(currentTallest);
+	   }
+	 });
+	}
+	$(window).load(function() {
+	  equalheight('.offers a');
+	});
+	$(window).resize(function(){
+	  equalheight('.offers a');
+	});
+</script>
+<script type="text/javascript">
+	equalheight = function(container){
+	var currentTallest = 0,
+		 currentRowStart = 0,
+		 rowDivs = new Array(),
+		 $el,
+		 topPosition = 0;
+	 $(container).each(function() {
+	   $el = $(this);
+	   $($el).height('auto')
+	   topPostion = $el.position().top;
+	   if (currentRowStart != topPostion) {
+		 for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+		   rowDivs[currentDiv].height(currentTallest);
+		 }
+		 rowDivs.length = 0; // empty the array
+		 currentRowStart = topPostion;
+		 currentTallest = $el.height();
+		 rowDivs.push($el);
+	   } else {
+		 rowDivs.push($el);
+		 currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+	  }
+	   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+		 rowDivs[currentDiv].height(currentTallest);
+	   }
+	 });
+	}
+	$(window).load(function() {
+	  equalheight('.report-charge li');
+	});
+	$(window).resize(function(){
+	  equalheight('.report-charge li');
+	});
+</script>
+
+</body>
+</html>

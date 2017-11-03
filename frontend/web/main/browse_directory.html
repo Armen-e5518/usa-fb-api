@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>PoliceArrests.com</title>
+	<meta property="og:title" content="PoliceArrests.com - Search Police Arrest Records" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://www.policearrests.com" />
+	<meta property="og:image" content="http://www.policearrests.com/img/og_image.png" />
+	<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/responsive.css" rel="stylesheet" type="text/css">
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<!-- Slick Nav -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+	<script src="js/slicknav/jquery.slicknav.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#hnav').slicknav();
+		});
+	</script>
+	<!-- Accordion -->
+	<script type="text/javascript" src="js/accordion/accordion.js"></script>
+	<!-- Newsticker -->
+	<script type="text/javascript" src="js/newsticker/newsticker.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("ul#ticker01").liScroll();
+		});
+	</script>
+	<!-- Resizing Header On Scroll -->
+	<script src="js/header/classie.js"></script>
+	<script>
+		function init() {
+			window.addEventListener('scroll', function(e){
+				var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+					shrinkOn = 90,
+					header = document.querySelector("header");
+				if (distanceY > shrinkOn) {
+					classie.add(header,"smaller");
+				} else {
+					if (classie.has(header,"smaller")) {
+						classie.remove(header,"smaller");
+					}
+				}
+			});
+		}
+		window.onload = init();
+	</script>
+</head>
+<body>
+
+<!-- Header -->
+<header id="header">
+	<div class="wrapper cf">
+		<div class="site-logo"><a href="#">PoliceArrests.com</a></div>
+		<div class="hnav">
+			<ul id="hnav">
+				<li><a href="#"><i class="icn-hnav-home"></i>Home</a></li>
+				<li><a href="#"><i class="icn-hnav-statistics"></i>Statistics</a></li>
+				<li><a href="#"><i class="icn-hnav-recent"></i>Recent</a></li>
+				<li><a href="#"><i class="icn-hnav-states"></i>Arrests</a></li>
+				<li class="app-btn1"><a class="app-ios" href="#">Available on the App Store</a></li>
+				<li class="app-btn2"><a class="app-android" href="#">Android App on Google Play</a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<!-- // Header -->
+
+<!-- Download App -->
+<div class="app-download">
+	<div class="wrapper">
+		<h2>Download Our Mobile App:</h2>
+		<ul>
+			<li><a class="app-ios" href="#">Available on the App Store</a></li>
+			<li><a class="app-android" href="#">Android App on Google Play</a></li>
+		</ul>
+		<a class="btn-close" href="#" title="Close">Close</a>
+	</div>
+</div>
+<!-- // Download App -->
+
+<!-- Main -->
+<div id="main">
+
+	<!-- Search -->
+	<div id="search2">
+		<div class="wrapper cf">
+			<div class="search-form cf">
+				<div class="row cf">
+					<div class="cell">
+						<input id="firstname" type="text" name="firstname" value="" placeholder="First Name" />
+					</div>
+					<div class="cell">
+						<input id="lastname" type="text" name="lastname" value="" placeholder="Last Name" />
+					</div>
+					<div class="cell">
+						<select id="state" name="state"><option value="" selected>Select State</option><option value="ALL">Nationwide</option><option value="AL">AL</option><option value="AK">AK</option><option value="AR">AR</option><option value="AZ">AZ</option><option value="CA">CA</option><option value="CO">CO</option><option value="CT">CT</option><option value="DC">DC</option><option value="DE">DE</option><option value="FL">FL</option><option value="GA">GA</option><option value="HI">HI</option><option value="IA">IA</option><option value="ID">ID</option><option value="IL">IL</option><option value="IN">IN</option><option value="KS">KS</option><option value="KY">KY</option><option value="LA">LA</option><option value="MA">MA</option><option value="MD">MD</option><option value="ME">ME</option><option value="MI">MI</option><option value="MN">MN</option><option value="MO">MO</option><option value="MS">MS</option><option value="MT">MT</option><option value="NE">NE</option><option value="NH">NH</option><option value="NJ">NJ</option><option value="NM">NM</option><option value="NV">NV</option><option value="NC">NC</option><option value="ND">ND</option><option value="NY">NY</option><option value="OH">OH</option><option value="OK">OK</option><option value="OR">OR</option><option value="PA">PA</option><option value="RI">RI</option><option value="SD">SD</option><option value="SC">SC</option><option value="TN">TN</option><option value="TX">TX</option><option value="UT">UT</option><option value="VA">VA</option><option value="VT">VT</option><option value="WA">WA</option><option value="WI">WI</option><option value="WV">WV</option><option value="WY">WY</option></select>
+					</div>
+					<div class="cell btn"><input type="submit" name="submit" value="Search Now" /></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // Search -->
+
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs">
+		<div class="wrapper cf">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li>Directory</li>
+			</ul>
+		</div>
+	</div>
+	<!-- // Breadcrumbs -->
+
+	<!-- Report -->
+	<div class="section section-dark">
+		<div class="wrapper cf">
+			<div class="content cf">
+				<div class="content-block">
+					<div class="content-block-inn">
+						<h2>Browse Police Arrest Records Directory</h2>
+						<div class="links-list two-rows cf">
+							<ul>
+								<li><a href="http://www.policearrests.com/browse/AL/" target="_self">Alabama Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/AK/" target="_self">Alaska Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/AZ/" target="_self">Arizona Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/AR/" target="_self">Arkansas Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/CA/" target="_self">California Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/CO/" target="_self">Colorado Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/CT/" target="_self">Connecticut Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/DE/" target="_self">Delaware Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/FL/" target="_self">Florida Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/GA/" target="_self">Georgia Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/HI/" target="_self">Hawaii Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/ID/" target="_self">Idaho Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/IL/" target="_self">Illinois Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/IN/" target="_self">Indiana Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/IA/" target="_self">Iowa Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/KS/" target="_self">Kansas Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/KY/" target="_self">Kentucky Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/LA/" target="_self">Louisiana Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/ME/" target="_self">Maine Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/MD/" target="_self">Maryland Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/MA/" target="_self">Massachusetts Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/MI/" target="_self">Michigan Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/MN/" target="_self">Minnesota Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/MS/" target="_self">Mississippi Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/MO/" target="_self">Missouri Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/MT/" target="_self">Montana Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/NE/" target="_self">Nebraska Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/NV/" target="_self">Nevada Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/NH/" target="_self">New Hampshire Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/NJ/" target="_self">New Jersey Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/NM/" target="_self">New Mexico Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/NY/" target="_self">New York Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/NC/" target="_self">North Carolina Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/ND/" target="_self">North Dakota Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/OH/" target="_self">Ohio Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/OK/" target="_self">Oklahoma Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/OR/" target="_self">Oregon Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/PA/" target="_self">Pennsylvania Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/RI/" target="_self">Rhode Island Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/SC/" target="_self">South Carolina Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/SD/" target="_self">South Dakota Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/TN/" target="_self">Tennessee Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/TX/" target="_self">Texas Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/UT/" target="_self">Utah Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/VT/" target="_self">Vermont Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/VA/" target="_self">Virginia Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/WA/" target="_self">Washington Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/WV/" target="_self">West Virginia Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/WI/" target="_self">Wisconsin Arrest Records</a></li>
+								<li><a href="http://www.policearrests.com/browse/WY/" target="_self">Wyoming Arrest Records</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="sidebar">
+					<div class="sidebar-block">
+						<div class="sidebar-header">
+							<h2><span>Offenders</span> In Your Area</h2>
+						</div>
+						<div class="sidebar-body">
+							<div class="sidebar-form cf">
+								<div class="row"><input id="city" type="text" name="city" value="" placeholder="Zip Code" /></div>
+								<div class="row"><input type="submit" name="submit" value="Free Search" /></div>
+							</div>
+						</div>
+					</div>
+					<div class="sidebar-block">
+						<div class="sidebar-header">
+							<h2>Tags</h2>
+						</div>
+						<div class="sidebar-body">
+							<div class="tags-list cf">
+								<ul>
+									<li><a href="#">Tag</a></li>
+									<li><a href="#">Tag</a></li>
+									<li><a href="#">Tag</a></li>
+									<li><a href="#">Tag</a></li>
+									<li><a href="#">Tag</a></li>
+									<li><a href="#">Tag</a></li>
+									<li><a href="#">Tag</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content cf">
+				<h2>Popular Searches</h2>
+				<div class="links-list four-rows cf">
+					<ul>
+						<li><a href="#">John Smith</a></li>
+						<li><a href="#">John Smith Smith Smith Smith</a></li>
+						<li><a href="#">John Smith</a></li>
+						<li><a href="#">John Smith</a></li>
+						<li><a href="#">John Smith</a></li>
+						<li><a href="#">John Smith</a></li>
+						<li><a href="#">John Smith</a></li>
+						<li><a href="#">John Smith</a></li>
+						<li><a href="#">John Smith</a></li>
+						<li><a href="#">John Smith</a></li>
+						<li><a href="#">John Smith</a></li>
+						<li><a href="#">John Smith</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // Report -->
+
+</div>
+<!-- // Main -->
+
+<!-- Footer -->
+<footer id="footer">
+	<div class="wrapper cf">
+		<div class="fblock fnav cf">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Browse</a></li>
+				<li><a href="#">Statistics</a></li>
+				<li><a href="#">Recent</a></li>
+				<li><a href="#">States</a></li>
+				<li><a href="#">Terms</a></li>
+				<li><a href="#">Privacy</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		<div class="fblock fcopy cf">
+			<p>&copy; 2016 PoliceArrests. All rights reserved.</p>
+		</div>
+		<div class="fblock fshare cf">
+			<ul>
+				<li><a class="fb" href="#">Facebook</a></li>
+				<li><a class="tw" href="#">Twitter</a></li>
+				<li><a class="gp" href="#">Google Plus</a></li>
+			</ul>
+		</div>
+		<div class="fblock fdisc cf">
+			<p>The information that makes up our search results is largely derived from public sources, which originate and/or aggregate such information. PoliceArrests.com does not originate, verify, or guarantee the accuracy of any information provide via search results. Search results may be out of date or otherwise no longer applicable.</p>
+			<p>PoliceArrests.com is not a "consumer reporting agency" as defined by Fair Credit Reporting Act. Our Terms of Service prohibit the use of PoliceArrests.com to determine an individual's eligibility for personal credit or employment, tenant screening, or other business transactions, or for any unlawful purposes such as stalking or harassing others. Such use of PoliceArrests.com may subject you to civil and criminal litigation and penalties.</p>
+			<p>Your use of PoliceArrests.com is conditioned on your full compliance with our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+		</div>
+	</div>
+</footer>
+<!-- // Footer -->
+
+<!-- Equal Height -->
+<script type="text/javascript">
+	equalheight = function(container){
+	var currentTallest = 0,
+		 currentRowStart = 0,
+		 rowDivs = new Array(),
+		 $el,
+		 topPosition = 0;
+	 $(container).each(function() {
+	   $el = $(this);
+	   $($el).height('auto')
+	   topPostion = $el.position().top;
+	   if (currentRowStart != topPostion) {
+		 for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+		   rowDivs[currentDiv].height(currentTallest);
+		 }
+		 rowDivs.length = 0; // empty the array
+		 currentRowStart = topPostion;
+		 currentTallest = $el.height();
+		 rowDivs.push($el);
+	   } else {
+		 rowDivs.push($el);
+		 currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+	  }
+	   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+		 rowDivs[currentDiv].height(currentTallest);
+	   }
+	 });
+	}
+	$(window).load(function() {
+	  equalheight('.links-list a');
+	});
+	$(window).resize(function(){
+	  equalheight('.links-list a');
+	});
+</script>
+
+</body>
+</html>

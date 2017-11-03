@@ -1,0 +1,51 @@
+{
+  "db": true,
+  "posts": {
+    "data": [
+      {
+        "message": "Today is the last day of the Jazz Festival. Please expect heavy traffic at Ft. Adams. Vehicles will be exiting this evening at approximately 7:00 p.m. so please plan your travels accordingly.",
+        "created_time": "2017-08-06T13:30:29+0000",
+        "id": "447426871975086_1596732097044552"
+      },
+      {
+        "message": "The Newport Jazz Festival will be held Friday August 4, 2017 to Sunday August 6, 2017 at Fort Adams State Park. Doors open at 10:00 a.m. and it is scheduled to end at sundown. \n\nThe parking for the festival opens at 8:00 a.m. There will be uniformed Newport Police Officers assigned to the festival to assist with traffic control.\n\nWe anticipate a heavy volume of traffic.  Please plan your travels accordingly.",
+        "created_time": "2017-08-03T00:42:26+0000",
+        "id": "447426871975086_1593173520733743"
+      }
+    ],
+    "paging": {
+      "cursors": {
+        "before": "Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5TTBORGMwTWpZANE56RTVOelV3T0RZANk16YzRPVGs0TmpNeU56VXdOVGczT1RFeU5ROE1ZAWEJwWDNOMGIzSjVYMmxrRHlBME5EYzBNalk0TnpFNU56VXdPRFpmTVRVNU5qY3pNakE1TnpBME5EVTFNZAzhFZAEdsdFpRWlpoeG4xQVE9PQZDZD",
+        "after": "Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5TTBORGMwTWpZANE56RTVOelV3T0RZANk1qZAzROVEUwTnpneE1qWTJPRFF6TURJME1BOE1ZAWEJwWDNOMGIzSjVYMmxrRHlBME5EYzBNalk0TnpFNU56VXdPRFpmTVRRNU5EY3pOVGc0TXpreE1EZAzBNUThFZAEdsdFpRWlpCNFYwQVE9PQZDZD"
+      },
+      "next": "https://graph.facebook.com/v2.9/447426871975086/posts?access_token=EAATvyAIX9dwBANOi16gDnkWc3363FHZCNC8bHZBcVmW5HI63ZAlnRkvQxnBETgyUlRqu9ZBrQeHaptCkMniCuuRwsJ5aYGYnl1harBuEk5X6VxD3LiiECgq1Lh5VzX9pi7k3OeLMCArgjhvzHmnED8sOoQrP5PXMaxSscuMo9wORJIn9CtAZA&fields=message%2Ccreated_time%2Cattachments.limit%281%29&limit=25&after=Q2c4U1pXNTBYM0YxWlhKNVgzTjBiM0o1WDJsa0R5TTBORGMwTWpZANE56RTVOelV3T0RZANk1qZAzROVEUwTnpneE1qWTJPRFF6TURJME1BOE1ZAWEJwWDNOMGIzSjVYMmxrRHlBME5EYzBNalk0TnpFNU56VXdPRFpmTVRRNU5EY3pOVGc0TXpreE1EZAzBNUThFZAEdsdFpRWlpCNFYwQVE9PQZDZD"
+    }
+  },
+  "page_data": {
+    "phone": "(401) 847-1306 for non-emergency  routine calls (401) 847-1212 is the emergency line ONLY",
+    "photos": {
+      "data": [
+        {
+          "picture": "https://scontent.xx.fbcdn.net/v/t1.0-0/p130x130/17424655_1445238028860627_6176245298316255906_n.jpg?oh=e7d82de1aa885fbb387b32abee44b143&oe=59EE1359",
+          "id": "1445238028860627"
+        }
+      ],
+      "paging": {
+        "cursors": {
+          "before": "MTQ0NTIzODAyODg2MDYyNwZDZD",
+          "after": "MTQ0NTIzODAyODg2MDYyNwZDZD"
+        },
+        "next": "https://graph.facebook.com/v2.9/447426871975086/photos?access_token=EAATvyAIX9dwBANOi16gDnkWc3363FHZCNC8bHZBcVmW5HI63ZAlnRkvQxnBETgyUlRqu9ZBrQeHaptCkMniCuuRwsJ5aYGYnl1harBuEk5X6VxD3LiiECgq1Lh5VzX9pi7k3OeLMCArgjhvzHmnED8sOoQrP5PXMaxSscuMo9wORJIn9CtAZA&fields=picture&limit=1&after=MTQ0NTIzODAyODg2MDYyNwZDZD"
+      }
+    },
+    "description": "To make an inquiry or complaint about an officer, please visit our website http://cityofnewport.com/departments/police/standards.\n\nIf a social media site used by the police department allows for comments to be posted by the public and that feature cannot be turned off, the Administrative Services supervisor reserves the right to edit or remove content based on the criteria listed below. The City’s intent is not to create a public forum, but to maintain a moderated online discussion directly relating to topics posted by the City that is appropriate for citizens that are over age 13 to read.\n\n•\tComments not topically related to the particular article being commented upon;\n•\tProfane language or content;\n•\tContent that promotes, fosters, or perpetuates discrimination on the basis of race, creed, color, age, religion, gender, marital status, status with regard to public assistance, national origin, physical or mental disability or sexual orientation;\n•\tSexual content or links to sexual content;\n•\tSolicitations of commerce;\n•\tConduct or encouragement of illegal activity;\n•\tInformation that may tend to compromise the safety or security of the public or public systems; or\n•\tContent that violates a copyright, trademark or other legal ownership interest of any other party’\n•\tDisparaging personal remarks or acrimony towards another person\n•\tCampaign information from a candidate for elected office or information related to a candidate’s personal campaign\n\nSocial network sites shall be used to promote the police department, police services, job opportunities and special events.\n\nThe Newport Police Department does not endorse any ads on this page.",
+    "cover": {
+      "cover_id": "758219237562513",
+      "offset_x": 0,
+      "offset_y": 0,
+      "source": "https://scontent.xx.fbcdn.net/v/t31.0-8/s720x720/10387181_758219237562513_8594814615046609172_o.jpg?oh=6f5f5d79d891f983188a0fd219f3c592&oe=59F79209",
+      "id": "758219237562513"
+    },
+    "id": "447426871975086"
+  }
+}
