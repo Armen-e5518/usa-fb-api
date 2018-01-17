@@ -17,7 +17,7 @@ $this->title = 'Facebook Posts';
                 <div class="col-md-12 button">
                     <span class="time">
                         <?= $time ?>
-                    <span>ms</span>
+                        <span>ms</span>
                     </span>
                     <button type="submit" class="btn btn-success">Submit</button>
                     <button type="submit" name="cache" value="1" class="btn btn-success">UPDATE NOW</button>
@@ -68,6 +68,10 @@ $this->title = 'Facebook Posts';
                                 </div>
                             <?php elseif (!empty($data['attachments']['data'][0]['media']['image']['src'])): ?>
                                 <img width="300px" src="<?= $data['attachments']['data'][0]['media']['image']['src'] ?>"
+                                     alt="">
+                            <?php endif; ?>
+                            <?php if (!empty($data['attachments']['data'][0]['subattachments']['data'][0]['media']['image']['src'])): ?>
+                                <img width="300px" src="<?= $data['attachments']['data'][0]['subattachments']['data'][0]['media']['image']['src'] ?>"
                                      alt="">
                             <?php endif; ?>
                         </div>

@@ -42,9 +42,11 @@ class Facebook
             return $this->facebook_ob->get('/' . $id . '/posts?fields=message,created_time,attachments.limit(1)');
         } catch (\Facebook\Exceptions\FacebookResponseException $e) {
             // When Graph returns an error
-            echo 'Graph returned an error: ' . $e->getMessage();
-            exit;
+            return [];
+//            echo 'Graph returned an error: ' . $e->getMessage();
+//            exit;
         } catch (\Facebook\Exceptions\FacebookSDKException $e) {
+
             // When validation fails or other local issues
             echo 'Facebook SDK returned an error: ' . $e->getMessage();
             exit;
@@ -79,8 +81,9 @@ class Facebook
             return $this->facebook_ob->get($id . '?fields=phone,photos.limit(1){picture},description,cover');
         } catch (\Facebook\Exceptions\FacebookResponseException $e) {
             // When Graph returns an error
-            echo 'Graph returned an error: ' . $e->getMessage();
-            exit;
+            return [];
+//            echo 'Graph returned an error: ' . $e->getMessage();
+//            exit;
         } catch (\Facebook\Exceptions\FacebookSDKException $e) {
             // When validation fails or other local issues
             echo 'Facebook SDK returned an error: ' . $e->getMessage();

@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use common\components\Facebook;
 use Yii;
 
 /**
@@ -107,28 +108,82 @@ class Fbdata extends \yii\mongodb\ActiveRecord
      * @param $url
      * @return null|string
      */
-    public static function SaveImage($id, $url)
+    public static function SaveImage($id = null, $url = null)
     {
-        if (!empty($id)) {
+        if (!empty($id) && !empty($url)) {
             $file_name = $id . '.jpg';
             $file_path = Yii::getAlias('@api') . '/web/images/' . $file_name;
             if (!file_exists($file_path)) {
-                if (fopen($file_path, 'w') && !empty($url) && file_put_contents($file_path, file_get_contents($url))) {
-                    return $file_name;
+                if (!empty(getimagesize($url))) {
+                    if (fopen($file_path, 'w') && !empty($url) && file_put_contents($file_path, file_get_contents($url))) {
+                        return $file_name;
+                    }
                 }
+            } else {
+                return $file_name;
             }
-            return $file_name;
         }
         return null;
     }
 
     /**
-     *
+     * Crone update fb posts
      */
     public static function CronRun()
     {
-        exit;
+        $offset = (int)file_get_contents('crone_limit.txt');
+        $limit = 150;
+        $count = self::find()->count();
+        $model = self::find()
+            ->select(['page_id'])
+            ->offset($offset)
+            ->limit($limit)
+            ->asArray()
+            ->all();
+        $d = 0;
+        foreach ($model as $kay => $m) {
+            $fb = new Facebook(\Yii::$app->params['api_facebook']);
+            $posts_o = $fb->GetPagePostsByPageId($m['page_id']);
+            if (!empty($posts_o)) {
+                $posts = $posts_o->getBody();
+                $posts = json_decode($posts, true);
+                $page_data_o = $fb->getPageDataByPageId($m['page_id']);
+                if (!empty($page_data_o)) {
+                    $page_data = $page_data_o->getDecodedBody();
+                    Fbdata::SavePageData($m['page_id'], $page_data, $posts);
+                    $d = $kay + 1;
+                }
+            }
+        }
+        if ($offset + $limit >= $count) {
+            file_put_contents('crone_limit.txt', 0);
+        } else {
+            file_put_contents('crone_limit.txt', $offset + $limit);
+        }
+        echo 'Updated offset ' . $offset . ' limit ' . $limit . ' All-' . ($d) . ' Fb pages';
+    }
+
+    /**
+     *
+     */
+    public static function AllCronRun()
+    {
         $model = self::find()->select(['page_id'])->asArray()->all();
-        print_r($model);
+        $d = 0;
+        foreach ($model as $kay => $m) {
+            $fb = new Facebook(\Yii::$app->params['api_facebook']);
+            $posts_o = $fb->GetPagePostsByPageId($m['page_id']);
+            if (!empty($posts)) {
+                $posts = $posts_o->getBody();
+                $posts = json_decode($posts, true);
+                $page_data_o = $fb->getPageDataByPageId($m['page_id']);
+                if (!empty($page_data_o)) {
+                    $page_data = $page_data_o->getDecodedBody();
+                    Fbdata::SavePageData($m['page_id'], $page_data, $posts);
+                    $d = $kay;
+                }
+            }
+        }
+        echo 'Updated ' . ($d + 1) . ' Fb pages';
     }
 }

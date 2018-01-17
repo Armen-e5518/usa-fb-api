@@ -16,6 +16,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use \yii\mongodb\Connection;
 
 /**
  * Site controller
@@ -92,17 +93,31 @@ class SiteController extends Controller
         }
         $fb = new Facebook(Yii::$app->params['api_facebook']);
         $page_id = $fb->GetPageIdByUrl($url);
+
         $fb_data = Fbdata::GetFbDataByPageId($page_id['id']);
         if (empty($fb_data) || $cache) {
-            $posts = $fb->GetPagePostsByPageId($page_id['id'])->getBody();
-            $posts = json_decode($posts, true);
-            $page_data = $fb->getPageDataByPageId($page_id['id'])->getDecodedBody();
-            Fbdata::SavePageData($page_id['id'], $page_data, $posts);
-        } else {
-            $page_data = $fb_data ['data'];
-            $posts = $fb_data ['posts'];
+            $posts_ob = $fb->GetPagePostsByPageId($page_id['id']);
+            if (!empty($posts_ob)) {
+                $posts = $posts_ob->getBody();
+                $posts = json_decode($posts, true);
+                $page_data_ob = $fb->getPageDataByPageId($page_id['id']);
+//                echo '<pre>';
+//                print_r($posts);
+//                exit;
+                if (!empty($page_data_ob)) {
+                    $page_data = $page_data_ob->getDecodedBody();
+                    Fbdata::SavePageData($page_id['id'], $page_data, $posts);
+                }
+            }
         }
+
+        $page_data = $fb_data ['data'];
+        $posts = $fb_data ['posts'];
+//        447426871975086
         $time_end = microtime(true);
+//        echo '<pre>';
+//        print_r($page_id);
+//exit;
         return $this->render('index', [
             'posts' => $posts,
             'url' => $url,
@@ -111,18 +126,10 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionTest()
+    public function actionCrone()
     {
-        exit;
+
         Fbdata::CronRun();
-        exit;
-
-        $url = 'https://scontent.xx.fbcdn.net/v/t1.0-0/p180x540/23031477_1682646428453118_5502945802874873787_n.jpg?oh=1bf40cc5153794ae6d461c65d26f7766&oe=5A9FBFBA';
-        var_dump(Fbdata::SaveImage('23031477_1682646428453118_55029458028748737878', $url));
-        exit;
-
-        $img = '/var/www/html/frontend/web/fb_images/test.jpg';
-        file_put_contents($img, file_get_contents($url));
     }
 
     /**
